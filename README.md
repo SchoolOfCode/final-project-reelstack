@@ -6,4 +6,4 @@ https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-13-Project?node-id=47-12
 
 ## Article
 
-https://www.canva.com/design/DAGRlRNXKwE/hRQjCJIid4d4_xXF732nag/edit?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAGRlRNXKwE/mAQMK2peDi0P8vbUyqKFtQ/view?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link&utm_source=editor
