@@ -9,7 +9,12 @@
     "lint": "next lint --max-warnings=0",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "dependencies": {
     "next": "14.2.13",

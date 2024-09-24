@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 
-const unusedVariable = 'I am not used anywhere';
+const unusedVariable = 'I am not used anywhere blah';
 
 export default function Home() {
   return (
