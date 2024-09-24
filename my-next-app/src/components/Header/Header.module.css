@@ -1,11 +1,65 @@
-.search-button {
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between title and button */
+    padding: 10px 15px; /* Add padding around the header for mobile */
+    background-color: #000;
+    box-sizing: border-box;
+    width: 100%; /* Set background color for visibility */
+}
+
+.title {
+    margin: 0; /* Remove default margin */
+    font-size: 1.2rem; /* Set font size */
+    color: #fff; /* Set text color */
+    letter-spacing: 0.2em;
+    flex: 1;/* Allow title to take available space */
+    white-space: nowrap;/* Prevent title from wrapping to next line */
+    text-overflow: ellipsis;/* Show ellipsis for overflow text */
+}
+
+.searchButton {
     background: transparent; /* Make background transparent */
     border: none; /* Remove border */
-    padding: 0; /* Remove padding */
+    padding: 0; /* Remove padding to eliminate extra space */
     cursor: pointer; /* Change cursor to pointer */
     display: flex; /* Flexbox for alignment */
     align-items: center; /* Center the icon vertically */
-    outline: none; /* Remove outline on focus */
-    position: relative; /* Optional: for precise positioning */
+    justify-content: center; /* Center the icon horizontally */
+    outline: none; /* Remove default outline on focus */
+    margin-left: 15px; /* Add space between title and button */
+    transition: stroke 0.3s; /* Smooth transitions */
+}
+
+.searchButton svg {
+    width: 24px; /* Set SVG width */
+    height: 24px; /* Set SVG height */
+    transition: fill 0.3s, stroke 0.3s; /* Smooth transition for hover effect */
+}
+
+.iconFill {
+    fill: #000; /* Set fill color to black (matches background) */
+}
+
+.iconStroke {
+    stroke: #fff; /* Set stroke color to white */
+}
+
+.searchButton:hover .iconStroke {
+    stroke: #e0e0e0; /* Lighten stroke color on hover */
+}
+
+.searchButton:active .iconStroke {
+    stroke: #c0c0c0; /* Darken stroke color when active (clicked) */
+}
+
+.searchButton:focus {
+/* /added to prevent the box of the button from having an outline when clicked,
+ if you want to see the button being clicked add colour etc as needed. */
+    box-shadow: none
+}
+
+.searchButton:focus .iconStroke {
+    stroke: #fff; /* Ensure stroke remains white on focus */
 }
 
