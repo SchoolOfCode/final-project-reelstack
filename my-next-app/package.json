@@ -9,7 +9,7 @@
     "lint": "next lint --max-warnings=0",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "postinstall": "husky install"
   },
   "husky": {
     "hooks": {

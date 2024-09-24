@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 
-const unusedVariable = 'I am not used andfkjbkjywhersdsdse blah';
+const unusedVariable = 'I am not used dandfkjbkjywhersdsdse blah';
 
-export default function Home() {
+export default function Home( {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
