@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
-          className={styles.logo}
+          class={styles.logo}
           src="https://nextjs.org/icons/next.svg"
           alt="Next.js logo"
           width={180}
