@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import Home from "./page";
 import "./globals.css";
+import Header from "../components/Header/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,6 +21,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <Home/>
+    <>
+    <html>
+      <body>
+    <Header/>
+    </body>
+    </html>
+    </>
   );
 }

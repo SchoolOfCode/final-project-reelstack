@@ -1,0 +1,11 @@
+.search-button {
+    background: transparent; /* Make background transparent */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center the icon vertically */
+    outline: none; /* Remove outline on focus */
+    position: relative; /* Optional: for precise positioning */
+}
+
