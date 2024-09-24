@@ -1,4 +1,4 @@
-// File: /Users/olikelly/Documents/Coding/school_of_code/reelstack/final-project-reelstack/my-next-app/src/app/page.js
+// File: C:\Users\rowan\Documents\GitHub\Final Project\final-project-reelstack\my-next-app\src\app\page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

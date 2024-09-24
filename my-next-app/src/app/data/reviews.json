@@ -1,7 +1,7 @@
 [
     {
       "review_id": "1",
-      "movie_id": "2",
+      "id": "2",
       "reviewer_name": "Alice Smith",
       "review": "A fun movie with a great mix of action and comedy.",
       "weighting": "0",
@@ -10,7 +10,7 @@
     },
     {
       "review_id": "2",
-      "movie_id": "2",
+      "id": "2",
       "reviewer_name": "Bob Johnson",
       "review": "My Spy was surprisingly charming and entertaining.",
       "weighting": "1",
@@ -19,7 +19,7 @@
     },
     {
       "review_id": "3",
-      "movie_id": "2",
+      "id": "2",
       "reviewer_name": "Carol Lee",
       "review": "It was a good watch, especially for families.",
       "weighting": "0",
@@ -28,7 +28,7 @@
     },
     {
       "review_id": "4",
-      "movie_id": "3",
+      "id": "3",
       "reviewer_name": "David Brown",
       "review": "The Predator reboot fell flat; too much focus on gore.",
       "weighting": "-1",
@@ -37,7 +37,7 @@
     },
     {
       "review_id": "5",
-      "movie_id": "3",
+      "id": "3",
       "reviewer_name": "Eve Wilson",
       "review": "An average action movie with a few good moments.",
       "weighting": "0",
@@ -46,7 +46,7 @@
     },
     {
       "review_id": "6",
-      "movie_id": "3",
+      "id": "3",
       "reviewer_name": "Frank Harris",
       "review": "It tried to be too many things at once and didn't excel at any.",
       "weighting": "-1",
@@ -55,7 +55,7 @@
     },
     {
       "review_id": "7",
-      "movie_id": "4",
+      "id": "4",
       "reviewer_name": "Grace Martin",
       "review": "Iron Man was a groundbreaking superhero film.",
       "weighting": "1",
@@ -64,7 +64,7 @@
     },
     {
       "review_id": "8",
-      "movie_id": "4",
+      "id": "4",
       "reviewer_name": "Henry Taylor",
       "review": "Robert Downey Jr. was perfect as Tony Stark.",
       "weighting": "1",
@@ -73,7 +73,7 @@
     },
     {
       "review_id": "9",
-      "movie_id": "4",
+      "id": "4",
       "reviewer_name": "Ivy Robinson",
       "review": "A solid start to the Marvel Cinematic Universe.",
       "weighting": "1",
@@ -82,7 +82,7 @@
     },
     {
       "review_id": "10",
-      "movie_id": "5",
+      "id": "5",
       "reviewer_name": "Jack White",
       "review": "Inception is a mind-bending thriller with stunning visuals.",
       "weighting": "1",
@@ -91,7 +91,7 @@
     },
     {
       "review_id": "11",
-      "movie_id": "5",
+      "id": "5",
       "reviewer_name": "Karen Green",
       "review": "The plot was complex, but the execution was brilliant.",
       "weighting": "1",
@@ -100,7 +100,7 @@
     },
     {
       "review_id": "12",
-      "movie_id": "5",
+      "id": "5",
       "reviewer_name": "Leo King",
       "review": "A visually stunning movie with great acting.",
       "weighting": "1",
@@ -109,7 +109,7 @@
     },
     {
       "review_id": "13",
-      "movie_id": "6",
+      "id": "6",
       "reviewer_name": "Mia Scott",
       "review": "Million Dollar Baby was deeply moving and emotional.",
       "weighting": "1",
@@ -118,7 +118,7 @@
     },
     {
       "review_id": "14",
-      "movie_id": "6",
+      "id": "6",
       "reviewer_name": "Noah Adams",
       "review": "An inspirational story with a heartbreaking twist.",
       "weighting": "1",
@@ -127,7 +127,7 @@
     },
     {
       "review_id": "15",
-      "movie_id": "6",
+      "id": "6",
       "reviewer_name": "Olivia Baker",
       "review": "Clint Eastwood and Hilary Swank deliver powerful performances.",
       "weighting": "1",
@@ -136,7 +136,7 @@
     },
     {
       "review_id": "16",
-      "movie_id": "7",
+      "id": "7",
       "reviewer_name": "Paul Anderson",
       "review": "The Kid Who Would Be King is a fresh take on a classic legend.",
       "weighting": "0",
@@ -145,7 +145,7 @@
     },
     {
       "review_id": "17",
-      "movie_id": "7",
+      "id": "7",
       "reviewer_name": "Quinn Nelson",
       "review": "A fun, family-friendly adventure with a good message.",
       "weighting": "1",
@@ -154,7 +154,7 @@
     },
     {
       "review_id": "18",
-      "movie_id": "7",
+      "id": "7",
       "reviewer_name": "Rachel Clark",
       "review": "It was enjoyable, but a bit predictable at times.",
       "weighting": "0",
@@ -163,7 +163,7 @@
     },
     {
       "review_id": "19",
-      "movie_id": "8",
+      "id": "8",
       "reviewer_name": "Sam Mitchell",
       "review": "The Dead Don't Die was quirky but lacked substance.",
       "weighting": "0",
@@ -172,7 +172,7 @@
     },
     {
       "review_id": "20",
-      "movie_id": "8",
+      "id": "8",
       "reviewer_name": "Tina Evans",
       "review": "Great cast, but the story was all over the place.",
       "weighting": "-1",
@@ -181,7 +181,7 @@
     },
     {
       "review_id": "21",
-      "movie_id": "8",
+      "id": "8",
       "reviewer_name": "Uma Carter",
       "review": "An interesting take on the zombie genre, but not for everyone.",
       "weighting": "0",
@@ -190,7 +190,7 @@
     },
     {
       "review_id": "22",
-      "movie_id": "9",
+      "id": "9",
       "reviewer_name": "Victor Hughes",
       "review": "Spider-Man: Homecoming is a fresh, fun take on the character.",
       "weighting": "1",
@@ -199,7 +199,7 @@
     },
     {
       "review_id": "23",
-      "movie_id": "9",
+      "id": "9",
       "reviewer_name": "Wendy Reed",
       "review": "Tom Holland's Spider-Man feels authentic and relatable.",
       "weighting": "1",
@@ -208,7 +208,7 @@
     },
     {
       "review_id": "24",
-      "movie_id": "9",
+      "id": "9",
       "reviewer_name": "Xavier Brooks",
       "review": "Great mix of humor, action, and heart.",
       "weighting": "1",
@@ -217,7 +217,7 @@
     },
     {
       "review_id": "25",
-      "movie_id": "10",
+      "id": "10",
       "reviewer_name": "Yvonne Moore",
       "review": "The Smurfs was colorful but felt a bit too childish.",
       "weighting": "0",
@@ -226,7 +226,7 @@
     },
     {
       "review_id": "26",
-      "movie_id": "10",
+      "id": "10",
       "reviewer_name": "Zachary Miller",
       "review": "A fun movie for kids, but not much for adults.",
       "weighting": "0",
@@ -235,7 +235,7 @@
     },
     {
       "review_id": "27",
-      "movie_id": "10",
+      "id": "10",
       "reviewer_name": "Amy Turner",
       "review": "Nostalgic but lacked depth in storytelling.",
       "weighting": "-1",
