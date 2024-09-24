@@ -11,11 +11,6 @@
     "prettier": "prettier --write .",
     "postinstall": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit\""
-    }
-  },
   "dependencies": {
     "next": "14.2.13",
     "react": "^18",
@@ -24,7 +19,7 @@
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
-    "husky": "^9.1.6",
+    "husky": "^4.3.8",
     "prettier": "^3.3.3"
   },
   "lint-staged": {
@@ -32,5 +27,5 @@
       "eslint --fix",
       "git add"
     ]
-}
+  }
 }
