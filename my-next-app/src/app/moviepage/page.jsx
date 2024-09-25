@@ -20,7 +20,7 @@ export default function MoviePage() {
       .then((response) => response.json())
       .then((data) => {
         setMovieData(data);
-        //console.log(data);
+        console.log(data);
       })
       .catch((err) => console.error(err));
   }, [movieId]);
@@ -37,7 +37,7 @@ export default function MoviePage() {
       .then((response) => response.json())
       .then((data) => {
         setReviewData(data);
-        //console.log(data);
+        console.log(data);
       })
       .catch((err) => console.error(err));
   }, [movieId]);
