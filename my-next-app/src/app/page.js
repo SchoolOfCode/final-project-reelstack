@@ -5,7 +5,7 @@ import './page.css';
 import reviews from './mock_db/reviews.json';
 import movies from './mock_db/movies.json';
 
-export default function HomePage() {
+export default function Homepage() {
   return (
     <>
       <section className="herosection">

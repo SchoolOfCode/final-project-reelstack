@@ -10,7 +10,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write .",
     "audit": "npm audit",
-    "postinstall": ""
+    "postinstall": "npm audit"
   },
   "dependencies": {
     "next": "14.2.13",
