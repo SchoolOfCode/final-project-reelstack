@@ -1,10 +1,29 @@
+'use client';
 import styles from './Header.module.css'; // Import CSS Modules
+import {useState} from 'react';
+import SearchBar from './searchBar.jsx';
 
 export default function Header() {
+  const [isSearchActive, setIsSearchActive] = useState(false);
+
+  const handleSearchClick = () => {
+    setIsSearchActive(true);
+  };
+
+  const handleCloseSearch = () => {
+    setIsSearchActive(false);
+  };
+
     return (
-        <header className={styles.header}>
-            <h1 className={styles.title}>📽️Reel Magic📽️</h1>
-            <button aria-label="Search" className={styles.searchButton}>
+        <header className={`${styles.header} ${isSearchActive ? styles.searchActiveHeader : ''}`}
+        >
+            <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>
+              📽️Reel Magic📽️
+            </h1>
+            <button aria-label="Search" 
+            className={`${styles.searchButton} ${isSearchActive ? styles.searchActive : ''}`}
+            onClick={!isSearchActive ? handleSearchClick : undefined}
+            >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
@@ -16,11 +35,13 @@ export default function Header() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 >
-                  This removes searchbar circle fill so the background is black
                     <circle className={styles.iconStroke} cx="10" cy="10" r="7"  />
                     <line className={styles.iconStroke} x1="21" y1="21" x2="15" y2="15" />
                 </svg>
             </button>
+            {isSearchActive && (
+             <SearchBar onClose={handleCloseSearch} />
+            )}
         </header>
     );
   }
