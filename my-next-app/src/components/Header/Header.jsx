@@ -16,8 +16,8 @@ export default function Header() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                 >
-                  {/* This removes searchbar circle fill so the background is black */}
-                    <circle className={styles.iconFill} cx="10" cy="10" r="7" />
+                  This removes searchbar circle fill so the background is black
+                    <circle className={styles.iconStroke} cx="10" cy="10" r="7"  />
                     <line className={styles.iconStroke} x1="21" y1="21" x2="15" y2="15" />
                 </svg>
             </button>
