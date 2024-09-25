@@ -1,38 +1,38 @@
 'use client';
 
 import React from 'react';
-import './page.css';
+import styles from './page.module.css';
 import reviews from './mock_db/reviews.json';
 import movies from './mock_db/movies.json';
 
 export default function Homepage() {
   return (
     <>
-      <section className="herosection">
+      <hr className={styles.hr}></hr>
+      <section className={styles.heroSection}>
         <h1>Welcome to Reel Magic, the home of movie reviews you can trust.</h1>
         <h2>Join the Reel Revolution!</h2>
       </section>
-
-      <section className="reviewsSection">
-        <div className="reviewContainer">
-          <h3>Check out the hottest reviews from the community...</h3>
-
+      <hr className={styles.hr}></hr>
+      <section className={styles.reviewsSection}>
+      <h3>Check out the hottest reviews from the community...</h3>
+        <div className={styles.reviewsContainer}>
           {reviews.map((review, review_id) => {
             return (
-              <div key={review_id} className="reviewCard">
-                <h4>{review.reviewer_name}</h4>
-                <br></br>
+              <div key={review_id} className={styles.reviewCard}>
+                <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
                 {movies.map((movie, movie_id) => {
-                  return movie.id === review.movie_id && <h5 key={movie_id}>{movie.title}</h5>;
+                  return movie.id === review.movie_id && <h5 className={styles.movieTitle} key={movie_id}>{movie.title}</h5>;
                 })}
+                <div className={styles.starsWrapper}>
                 {[...Array(review.star_rating)].map((_, i) => (
                   <span key={i}>⭐</span>
                 ))}
+                </div>
                 <p>
-                  <br></br>
                   {review.review}
                 </p>
-                <div className="voteContainer">
+                <div className={styles.voteContainer}>
                   <span>
                     {review.weighting > 0 ? review.weighting : 0}{' '}
                     <svg
