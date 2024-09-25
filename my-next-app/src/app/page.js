@@ -14,6 +14,40 @@ export default function Homepage() {
         <h2>Join the Reel Revolution!</h2>
       </section>
       <hr className={styles.hr}></hr>
+
+      <section>
+        <h3>Popular Movies</h3>
+        <div className={styles.carousel}>
+          <div className={styles.movieBox}>
+            <div className={styles.poster}>
+              <img src="/download.jpeg" />
+            </div>
+            <div className={styles.movieInfo}>
+              <p>The Batman</p>
+              <p>⭐️⭐️⭐️⭐️⭐️</p>
+            </div>
+          </div>
+          <div className={styles.movieBox}>
+            <div className={styles.poster}>
+              <img src="/download.jpeg" />
+            </div>
+            <div className={styles.movieInfo}>
+              <p>The Batman</p>
+              <p>⭐️⭐️⭐️⭐️⭐️</p>
+            </div>
+          </div>
+          <div className={styles.movieBox}>
+            <div className={styles.poster}>
+              <img src="/download.jpeg" />
+            </div>
+            <div className={styles.movieInfo}>
+              <p>The Batman</p>
+              <p>⭐️⭐️⭐️⭐️⭐️</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr className={styles.hr}></hr>
       <section className={styles.reviewsSection}>
       <h3>Check out the hottest reviews from the community...</h3>
         <div className={styles.reviewsContainer}>

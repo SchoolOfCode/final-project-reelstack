@@ -7,6 +7,33 @@
   justify-content: center;
 }
 
+.carousel {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+}
+
+.movieBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.poster img {
+  border-radius: 10px;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieInfo p {
+  margin: 0;
+}
+
 .reviewsContainer {
   display: flex;
   flex-direction: column;
