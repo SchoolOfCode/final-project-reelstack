@@ -20,6 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <Home/>
+    <h1> KEEP IT REEL </h1>
+    
   );
 }
