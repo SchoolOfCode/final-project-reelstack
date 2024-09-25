@@ -1,7 +1,6 @@
 import "./globals.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import HomePage from "./homepage/page";
 import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
