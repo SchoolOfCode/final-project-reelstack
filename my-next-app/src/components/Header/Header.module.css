@@ -15,9 +15,9 @@
   font-size: 1.2rem; /* Set font size */
   color: #fff; /* Set text color */
   letter-spacing: 0.2em;
-  flex: 1;/* Allow title to take available space */
-  white-space: nowrap;/* Prevent title from wrapping to next line */
-  text-overflow: ellipsis;/* Show ellipsis for overflow text */
+  flex: 1; /* Allow title to take available space */
+  white-space: nowrap; /* Prevent title from wrapping to next line */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
   transition: opacity 0.3s;
   display: block;
 }
@@ -37,17 +37,20 @@
   justify-content: center; /* Center the icon horizontally */
   outline: none; /* Remove default outline on focus */
   margin-left: 15px; /* Add space between title and button */
-  transition: margin-left 0.3s ease, transform 0.3s ease;
+  transition:
+    margin-left 0.3s ease,
+    transform 0.3s ease;
   position: relative;
   z-index: 2; /* Ensure the button stays above the search bar */
 }
 
-
 .searchButton svg {
   width: 24px; /* Set SVG width */
   height: 24px; /* Set SVG height */
-  transition: fill 0.3s, stroke 0.3s;
-   /* Smooth transition for hover effect */
+  transition:
+    fill 0.3s,
+    stroke 0.3s;
+  /* Smooth transition for hover effect */
 }
 
 .iconFill {
@@ -67,9 +70,9 @@
 }
 
 .searchButton:focus {
-/* /added to prevent the box of the button from having an outline when clicked,
+  /* /added to prevent the box of the button from having an outline when clicked,
 if you want to see the button being clicked add colour etc as needed. */
-  box-shadow: none
+  box-shadow: none;
 }
 
 .searchButton:focus .iconStroke {
