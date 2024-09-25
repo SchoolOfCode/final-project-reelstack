@@ -1,17 +1,29 @@
 'use client';
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import movies from '../data/movies.json';
 import reviews from '../data/reviews.json';
 
 export default function MoviePage() {
-    const [movieId, setMovieId] = useState(3) // Change this to the desired movie id
-    const movie = movies.find((movie) => movie.id === movieId);
+    const [movieId, setMovieId] = useState(null); // Initial movie
 
+    const movie = movies.find((movie) => movie.id === movieId);
     const movieReviews = reviews.filter((review) => review.movie_id === movieId);
+
     return (
         <div>
+            {/* Movie Selector */}
+            <div>
+                <label>Select a movie: </label>
+                <select value={movieId} onChange={(e) => setMovieId(Number(e.target.value))}>
+                    {movies.map((movie) => (
+                        <option key={movie.id} value={movie.id}>
+                            {movie.title}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
             {movie ? (
                 <>
                     <h1>{movie.title}</h1>
@@ -22,25 +34,18 @@ export default function MoviePage() {
             ) : (
                 <p>Movie not found</p>
             )}
+
             <h2>Reviews</h2>
-            {reviews.length > 0 ? (
-                reviews.map((review) => (
+            {movieReviews.length > 0 ? (
+                movieReviews.map((review) => (
                     <div key={review.review_id}>
                         <h3>{review.reviewer_name}</h3>
                         <p>{review.review}</p>
-                        <p>{review.id}</p>
                     </div>
                 ))
             ) : (
-                <p>No reviews found</p>
+                <p>No reviews found for this movie</p>
             )}
         </div>
     );
-    }
-
-
-
-//Choose movie by id
-//show movie details
-//show movie reviews
-//show movie cast
+}
