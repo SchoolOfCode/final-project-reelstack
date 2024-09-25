@@ -1,15 +1,14 @@
 
 'use client';
 import React, { useState , useEffect } from "react";
-import movies from '../mock_db/movies.json';
-import reviews from '../mock_db/reviews.json';
+import styles from './page.module.css'
+// import movies from '../mock_db/movies.json';
+// import reviews from '../mock_db/reviews.json';
 
 export default function MoviePage() {
     const [movieId, setMovieId] = useState(null); // Initial movie
     const [movieData, setMovieData] = useState(null);
     const [reviewData, setReviewData] = useState(null);
-    // const movie = movies.find((movie) => movie.id === movieId);
-    // const movieReviews = reviews.filter((review) => review.movie_id === movieId);
 
 const options = {
   method: 'GET',
@@ -48,7 +47,7 @@ const reviews = {
 }, [movieId]);
 
     return (
-        <div>
+        <div className={styles.wrapper}>
             {/* Movie Selector */}
             <div>
                 <label>Select a movie: </label>
@@ -60,22 +59,22 @@ const reviews = {
             </div>
             {movieData ? (
                 <>
-                    <img src={`https://image.tmdb.org/t/p/w200/${movieData.poster_path}`} alt={movieData.title} width="200" />
-                    <h1>{movieData.original_title}</h1>
-                    <p>{movieData.overview}</p>
-                    <p>Release Date: {movieData.release_date}</p>
+                    <img className={styles.text} src={`https://image.tmdb.org/t/p/w200/${movieData.poster_path}`} alt={movieData.title} width="200" />
+                    <h1 className={styles.text}>{movieData.original_title}</h1>
+                    <p className={styles.text}>{movieData.overview}</p>
+                    <p className={styles.text}>Release Date: {movieData.release_date}</p>
                     
                 </>
             ) : (
                 <p>Movie not found</p>
             )}
-            <h2>Reviews</h2>
+            <h2 className={styles.text}>Reviews</h2>
       {reviewData && reviewData.results && reviewData.results.length > 0 ? (
         reviewData.results.map((review) => (
           <div key={review.id}>
-            <h3>{review.author}</h3>
-            <h3>Rating: {review.author_details?.rating ?? 'No rating'}</h3>
-            <p>{review.content}</p>
+            <h3 className={styles.text}>{review.author}</h3>
+            <h3 className={styles.text}>Rating: {review.author_details?.rating ?? 'No rating'}</h3>
+            <p className={styles.text}>{review.content}</p>
           </div>
         ))
       ) : (
