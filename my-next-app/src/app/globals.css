@@ -31,4 +31,6 @@ hr {
   border: none;
   height: 3px;
   background: linear-gradient(90deg, #ff6d00, #ff9e00 );
+  margin-top: 2rem;
+  width: 95%
 }

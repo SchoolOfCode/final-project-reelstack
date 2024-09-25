@@ -39,7 +39,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   overflow-x: scroll;
-  max-height: 500px;
+  max-height: 700px;
 }
 
 .reviewCard {
