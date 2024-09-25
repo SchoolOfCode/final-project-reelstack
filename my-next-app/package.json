@@ -9,6 +9,7 @@
     "lint": "next lint --max-warnings=0",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write .",
+    "audit": "npm audit",
     "postinstall": ""
   },
   "dependencies": {
@@ -24,7 +25,16 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "git add"
+      "prettier --write"
     ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true  
   }
 }

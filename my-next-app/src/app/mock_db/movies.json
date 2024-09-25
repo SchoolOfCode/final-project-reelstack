@@ -1,93 +1,92 @@
 [
-    {
-      "poster_path": "/uJgdT1boTSP0dDIjdTgGleg71l4.jpg",
-      "adult": false,
-      "overview": "A hardened CIA operative finds himself at the mercy of a precocious 9-year-old girl, having been sent undercover to surveil her family.",
-      "release_date": "2020",
-      "id": 2,
-      "title": "My Spy",
-      "backdrop_path": "/xFxk4vnirOtUxpOEWgA1MCRfy6J.jpg"
-    },
-    {
-      "poster_path": "/aCIFMriQhNbCFi8Y7D9gI8dEBU9.jpg",
-      "adult": false,
-      "overview": "When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
-      "release_date": "2018",
-      "id": 3,
-      "title": "The Predator",
-      "backdrop_path": "/8fMfP9rw6cbX5i3VXP7QC9fr2Lg.jpg"
-    },
-    {
-      "poster_path": "/h1B7tW0t399VDjAcWJh8m87469b.jpg",
-      "adult": false,
-      "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      "release_date": "2008",
-      "id": 4,
-      "title": "Iron Man",
-      "backdrop_path": "/2Fdlhx3zKvVapz09Xs2TmbbEy28.jpg"
-    },
-    {
-      "poster_path": "/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg",
-      "adult": false,
-      "overview": "Dom Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets, is offered a chance to regain his old life as payment for a task considered to be impossible.",
-      "release_date": "2010",
-      "id": 5,
-      "title": "Inception",
-      "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg"
-    },
-    {
-      "poster_path": "/gwPSoYUHAKmdyVywgLpKKA4BjRr.jpg",
-      "adult": false,
-      "overview": "A determined woman works with a hardened boxing trainer to become a professional.",
-      "release_date": "2004",
-      "id": 6,
-      "title": "Million Dollar Baby",
-      "backdrop_path": "/9bXER3Xfvz1lQPRjkXXywwveL2p.jpg"
-    },
-    {
-      "poster_path": "/3vFIqnZqqgqIe7Ib8xRulZK9QP9.jpg",
-      "adult": false,
-      "overview": "When a young boy discovers a magical sword in the stone, he must unite his friends and enemies into a band of knights and, together with the legendary wizard Merlin, take on the wicked enchantress Morgana.",
-      "release_date": "2019",
-      "id": 7,
-      "title": "The Kid Who Would Be King",
-      "backdrop_path": "/uQYi1KCUkIeXKSgDy5KxxKsy5yZ.jpg"
-    },
-    {
-      "poster_path": "/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg",
-      "adult": false,
-      "overview": "An ambitious journalist, a poet, and a writer come across an actress as they look for inspirations to overcome their writer's block.",
-      "release_date": "2019",
-      "id": 8,
-      "title": "The Dead Don't Die",
-      "backdrop_path": "/wP0a9D1fySkfBw3tTjD5nlDxFrn.jpg"
-    },
-    {
-      "poster_path": "/vuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
-      "adult": false,
-      "overview": "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",
-      "release_date": "2017",
-      "id": 9,
-      "title": "Spider-Man: Homecoming",
-      "backdrop_path": "/vw6xE06Un5EfK1M7o6e3FoLEoDA.jpg"
-    },
-    {
-      "poster_path": "/eXb9HGKAnf8MEq26BLWztHr56KU.jpg",
-      "adult": false,
-      "overview": "When the evil wizard Gargamel chases the tiny blue Smurfs out of their village, they tumble from their magical world and into ours.",
-      "release_date": "2011",
-      "id": 10,
-      "title": "The Smurfs",
-      "backdrop_path": "/3PxJrd6frYRe3T8vY3g7w2Z8Mzg.jpg"
-    },
-    {
-      "poster_path": "/n7f0JQz0lPpd9eUnLrtz9DEfNha.jpg",
-      "adult": false,
-      "overview": "Sheriff Roy Pulsipher is about to enjoy an eternity of kicking undead ass and taking names. But he has his afterlife's work cut out for him when a new recruit shows up.",
-      "release_date": "2013",
-      "id": 11,
-      "title": "R.I.P.D.",
-      "backdrop_path": "/4IZo1sKsBXk2F1BlJpgL9Jj25KT.jpg"
-    }
-  ]
-  
+  {
+    "poster_path": "/uJgdT1boTSP0dDIjdTgGleg71l4.jpg",
+    "adult": false,
+    "overview": "A hardened CIA operative finds himself at the mercy of a precocious 9-year-old girl, having been sent undercover to surveil her family.",
+    "release_date": "2020",
+    "id": 2,
+    "title": "My Spy",
+    "backdrop_path": "/xFxk4vnirOtUxpOEWgA1MCRfy6J.jpg"
+  },
+  {
+    "poster_path": "/aCIFMriQhNbCFi8Y7D9gI8dEBU9.jpg",
+    "adult": false,
+    "overview": "When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
+    "release_date": "2018",
+    "id": 3,
+    "title": "The Predator",
+    "backdrop_path": "/8fMfP9rw6cbX5i3VXP7QC9fr2Lg.jpg"
+  },
+  {
+    "poster_path": "/h1B7tW0t399VDjAcWJh8m87469b.jpg",
+    "adult": false,
+    "overview": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "release_date": "2008",
+    "id": 4,
+    "title": "Iron Man",
+    "backdrop_path": "/2Fdlhx3zKvVapz09Xs2TmbbEy28.jpg"
+  },
+  {
+    "poster_path": "/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg",
+    "adult": false,
+    "overview": "Dom Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets, is offered a chance to regain his old life as payment for a task considered to be impossible.",
+    "release_date": "2010",
+    "id": 5,
+    "title": "Inception",
+    "backdrop_path": "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg"
+  },
+  {
+    "poster_path": "/gwPSoYUHAKmdyVywgLpKKA4BjRr.jpg",
+    "adult": false,
+    "overview": "A determined woman works with a hardened boxing trainer to become a professional.",
+    "release_date": "2004",
+    "id": 6,
+    "title": "Million Dollar Baby",
+    "backdrop_path": "/9bXER3Xfvz1lQPRjkXXywwveL2p.jpg"
+  },
+  {
+    "poster_path": "/3vFIqnZqqgqIe7Ib8xRulZK9QP9.jpg",
+    "adult": false,
+    "overview": "When a young boy discovers a magical sword in the stone, he must unite his friends and enemies into a band of knights and, together with the legendary wizard Merlin, take on the wicked enchantress Morgana.",
+    "release_date": "2019",
+    "id": 7,
+    "title": "The Kid Who Would Be King",
+    "backdrop_path": "/uQYi1KCUkIeXKSgDy5KxxKsy5yZ.jpg"
+  },
+  {
+    "poster_path": "/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg",
+    "adult": false,
+    "overview": "An ambitious journalist, a poet, and a writer come across an actress as they look for inspirations to overcome their writer's block.",
+    "release_date": "2019",
+    "id": 8,
+    "title": "The Dead Don't Die",
+    "backdrop_path": "/wP0a9D1fySkfBw3tTjD5nlDxFrn.jpg"
+  },
+  {
+    "poster_path": "/vuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+    "adult": false,
+    "overview": "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",
+    "release_date": "2017",
+    "id": 9,
+    "title": "Spider-Man: Homecoming",
+    "backdrop_path": "/vw6xE06Un5EfK1M7o6e3FoLEoDA.jpg"
+  },
+  {
+    "poster_path": "/eXb9HGKAnf8MEq26BLWztHr56KU.jpg",
+    "adult": false,
+    "overview": "When the evil wizard Gargamel chases the tiny blue Smurfs out of their village, they tumble from their magical world and into ours.",
+    "release_date": "2011",
+    "id": 10,
+    "title": "The Smurfs",
+    "backdrop_path": "/3PxJrd6frYRe3T8vY3g7w2Z8Mzg.jpg"
+  },
+  {
+    "poster_path": "/n7f0JQz0lPpd9eUnLrtz9DEfNha.jpg",
+    "adult": false,
+    "overview": "Sheriff Roy Pulsipher is about to enjoy an eternity of kicking undead ass and taking names. But he has his afterlife's work cut out for him when a new recruit shows up.",
+    "release_date": "2013",
+    "id": 11,
+    "title": "R.I.P.D.",
+    "backdrop_path": "/4IZo1sKsBXk2F1BlJpgL9Jj25KT.jpg"
+  }
+]

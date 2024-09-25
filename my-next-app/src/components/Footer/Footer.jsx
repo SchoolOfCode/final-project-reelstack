@@ -1,9 +1,9 @@
-import styles from "./Footer.module.css"
+import styles from './Footer.module.css';
 
 export default function Footer() {
-return (
+  return (
     <section className={styles.footerContainer}>
-<p>ⓒ ReelMagic inc. 2024</p>
+      <p>ⓒ ReelMagic inc. 2024</p>
     </section>
-)
+  );
 }

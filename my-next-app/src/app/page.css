@@ -10,15 +10,13 @@
   color: white;
 }
 
-
-.reviewCard{
+.reviewCard {
   background-color: black;
   color: white;
   padding: 2em;
   margin: 3em;
   border-radius: 1em;
 }
-
 
 .voteContainer {
   display: flex;
