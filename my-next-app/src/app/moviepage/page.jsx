@@ -1,12 +1,34 @@
 
 'use client';
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import movies from '../mock_db/movies.json';
 import reviews from '../mock_db/reviews.json';
+
 export default function MoviePage() {
     const [movieId, setMovieId] = useState(null); // Initial movie
-    const movie = movies.find((movie) => movie.id === movieId);
+    const [movieData, setMovieData] = useState(null);
+    // const movie = movies.find((movie) => movie.id === movieId);
     const movieReviews = reviews.filter((review) => review.movie_id === movieId);
+
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTM5NTE2MmJjNDA5MzQ2MTMyNmM5NzUyZTBkZjMzZiIsIm5iZiI6MTcyNzI1NjM4Ny41OTcyMzYsInN1YiI6IjY2Y2RkOWM2NmZkMmYwN2FiNzlkYjE3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n6Dhal1cf-trWSV3ewyYHw9HMouvYGBgv-pqFu3N2B0'
+  }
+};
+
+useEffect(() => {
+  fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=en-US`, options)
+    .then(response => response.json())
+    .then(data => {
+        setMovieData(data);
+        console.log(data);
+    })
+    .catch(err => console.error(err));    
+}, [movieId]);
+
+
     return (
         <div>
             {/* Movie Selector */}
@@ -20,12 +42,12 @@ export default function MoviePage() {
                     ))}
                 </select>
             </div>
-            {movie ? (
+            {movieData ? (
                 <>
-                    <h1>{movie.title}</h1>
-                    <p>{movie.overview}</p>
-                    <p>Release Date: {movie.release_date}</p>
-                    <img src={movie.poster_path} alt={movie.title} width="200" />
+                    <h1>{movieData.original_title}</h1>
+                    <p>{movieData.overview}</p>
+                    <p>Release Date: {movieData.release_date}</p>
+                    <img src={`https://image.tmdb.org/t/p/w200/${movieData.poster_path}`} alt={movieData.title} width="200" />
                 </>
             ) : (
                 <p>Movie not found</p>
