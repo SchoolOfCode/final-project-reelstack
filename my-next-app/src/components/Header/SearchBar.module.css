@@ -1,0 +1,52 @@
+/* my-next-app/src/components/SearchBar.module.css */
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 50px; /* Add space to the left to accommodate the shifted button */
+    transition: opacity 0.3s ease;
+}
+
+.input {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    color: #000;
+}
+
+.closeButton {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.submitButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .searchBar {
+        margin-left: 40px; /* Adjust spacing for smaller screens */
+    }
+
+    .input {
+        font-size: 0.9rem;
+    }
+}
+
+/* Optional: Style for the placeholder text */
+.input::placeholder {
+    color: #888; /* Sets placeholder text color to a shade of gray */
+}

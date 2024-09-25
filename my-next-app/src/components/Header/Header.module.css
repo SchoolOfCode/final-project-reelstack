@@ -1,11 +1,13 @@
 .header {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Align items vertically in the center */
-  justify-content: space-between; /* Space between title and button */
+  /* justify-content: space-between; Space between title and button */
+  justify-content: flex-end; /* Initially align items to the right */
   padding: 10px 15px; /* Add padding around the header for mobile */
-  background-color: #000;
-  box-sizing: border-box;
+  background-color: #001523;
   width: 100%; /* Set background color for visibility */
+  position: relative; /* Ensure relative positioning for search bar */
+  transition: justify-content 0.3s; /* Smooth transition for search bar */
 }
 
 .title {
@@ -13,9 +15,16 @@
   font-size: 1.2rem; /* Set font size */
   color: #fff; /* Set text color */
   letter-spacing: 0.2em;
-  flex: 1; /* Allow title to take available space */
-  white-space: nowrap; /* Prevent title from wrapping to next line */
-  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  flex: 1;/* Allow title to take available space */
+  white-space: nowrap;/* Prevent title from wrapping to next line */
+  text-overflow: ellipsis;/* Show ellipsis for overflow text */
+  transition: opacity 0.3s;
+  display: block;
+}
+
+.title.hidden {
+  opacity: 0;
+  display: none;
 }
 
 .searchButton {
@@ -28,15 +37,17 @@
   justify-content: center; /* Center the icon horizontally */
   outline: none; /* Remove default outline on focus */
   margin-left: 15px; /* Add space between title and button */
-  transition: stroke 0.3s; /* Smooth transitions */
+  transition: margin-left 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 2; /* Ensure the button stays above the search bar */
 }
+
 
 .searchButton svg {
   width: 24px; /* Set SVG width */
   height: 24px; /* Set SVG height */
-  transition:
-    fill 0.3s,
-    stroke 0.3s; /* Smooth transition for hover effect */
+  transition: fill 0.3s, stroke 0.3s;
+   /* Smooth transition for hover effect */
 }
 
 .iconFill {
@@ -56,11 +67,25 @@
 }
 
 .searchButton:focus {
-  /* /added to prevent the box of the button from having an outline when clicked,
- if you want to see the button being clicked add colour etc as needed. */
-  box-shadow: none;
+/* /added to prevent the box of the button from having an outline when clicked,
+if you want to see the button being clicked add colour etc as needed. */
+  box-shadow: none
 }
 
 .searchButton:focus .iconStroke {
   stroke: #fff; /* Ensure stroke remains white on focus */
+}
+
+/* Shift search button to the left when active */
+.searchActive {
+  margin-left: 0;
+  position: absolute;
+  left: 15px; /* Move to the left side */
+  right: auto;
+  transform: translateX(0);
+}
+
+/* Adjust header's justify-content when search is active */
+.searchActiveHeader {
+  justify-content: flex-start; /* Align items to the left */
 }
