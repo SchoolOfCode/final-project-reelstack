@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import reviews from './mock_db/reviews.json';
 import movies from './mock_db/movies.json';
 
 export default function Homepage() {
-
   // const options = {
   //   method: 'GET',
   //   headers: {
@@ -24,55 +23,58 @@ export default function Homepage() {
   //       .catch(err => console.error(err));
   //   }, []);
 
-
   return (
     <>
       <hr className={styles.hr}></hr>
       <section className={styles.heroSection}>
         <h1>Welcome to Reel Magic, the home of movie reviews you can trust.</h1>
-        <h2>Join the Reel Revolution!</h2>
+        <div className={styles.taglineContainer}>
+          <h2 className={styles.tagline}>Join the Reel Revolution!</h2>
+        </div>
       </section>
       <hr className={styles.hr}></hr>
 
       <section>
         <h3>Popular Movies</h3>
         <div className={styles.carousel}>
-          
           {movies.map((movie, movie_id) => {
-      return (
-        <div key={movie_id} className={styles.movieBox}>
-          <div className={styles.poster}>
-            <img src={movie.posterUrl || "/download.jpeg"} alt={movie.title} />
-          </div>
-          <div className={styles.movieInfo}>
-            <p>{movie.title}</p>
-            <p>{'⭐️'.repeat(movie.rating)}</p>
-          </div>
-        </div>
-             );
+            return (
+              <div key={movie_id} className={styles.movieBox}>
+                <div className={styles.poster}>
+                  <img src={movie.posterUrl || '/download.jpeg'} alt={movie.title} />
+                </div>
+                <div className={styles.movieInfo}>
+                  <p>{movie.title}</p>
+                  <p>{'⭐️'.repeat(movie.rating)}</p>
+                </div>
+              </div>
+            );
           })}
-
         </div>
       </section>
       <hr className={styles.hr}></hr>
       <section className={styles.reviewsSection}>
-      <h3>Check out the hottest reviews from the community...</h3>
+        <h3>Check out the hottest reviews from the community...</h3>
         <div className={styles.reviewsContainer}>
           {reviews.map((review, review_id) => {
             return (
               <div key={review_id} className={styles.reviewCard}>
                 <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
                 {movies.map((movie, movie_id) => {
-                  return movie.id === review.movie_id && <h5 className={styles.movieTitle} key={movie_id}>{movie.title}</h5>;
+                  return (
+                    movie.id === review.movie_id && (
+                      <h5 className={styles.movieTitle} key={movie_id}>
+                        {movie.title}
+                      </h5>
+                    )
+                  );
                 })}
                 <div className={styles.starsWrapper}>
-                {[...Array(review.star_rating)].map((_, i) => (
-                  <span key={i}>⭐</span>
-                ))}
+                  {[...Array(review.star_rating)].map((_, i) => (
+                    <span key={i}>⭐</span>
+                  ))}
                 </div>
-                <p>
-                  {review.review}
-                </p>
+                <p>{review.review}</p>
                 <div className={styles.voteContainer}>
                   <span>
                     {review.weighting > 0 ? review.weighting : 0}{' '}
