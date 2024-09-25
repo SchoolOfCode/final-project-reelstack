@@ -55,7 +55,9 @@
   padding: 1rem;
 }
 
-.reviewerName, .reviewCard h5, .reviewCard p {
+.reviewerName,
+.reviewCard h5,
+.reviewCard p {
   margin: 0;
 }
 
@@ -66,10 +68,8 @@
 }
 
 .starsWrapper span {
-margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
-
-
 
 /* .voteContainer {
   display: flex;
