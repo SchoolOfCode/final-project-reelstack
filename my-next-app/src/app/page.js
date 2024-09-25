@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import './page.css';
 import reviews from "./mock_db/reviews.json"
