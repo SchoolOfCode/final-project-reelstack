@@ -1,7 +1,7 @@
 'use client';
 import styles from './Header.module.css'; // Import CSS Modules
 import { useState } from 'react';
-import SearchBar from './searchBar.jsx';
+import SearchBar from './SearchBar.jsx';
 
 export default function Header() {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isSearchActive ? styles.searchActiveHeader : ''}`}>
       <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>
-        :film_projector:Reel Magic:film_projector:
+        📽Reel Magic📽
       </h1>
       <button
         aria-label="Search"
