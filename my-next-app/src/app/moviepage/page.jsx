@@ -1,7 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 
 
-'use client';
 import React, { useState } from "react";
 import movies from '../mock_db/movies.json';
 import reviews from '../mock_db/reviews.json';
