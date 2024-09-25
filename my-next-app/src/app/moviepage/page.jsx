@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState } from "react";
 import movies from '../mock_db/movies.json';
