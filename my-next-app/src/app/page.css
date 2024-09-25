@@ -1,0 +1,27 @@
+.heroSection {
+  background-color: grey;
+  padding: 5em;
+}
+
+.reviewsSection {
+  background-color: rgb(1, 1, 65);
+  padding: 1em;
+  color: white;
+}
+
+
+.reviewCard{
+  background-color: black;
+  color: white;
+  padding: 2em;
+  margin: 3em;
+  border-radius: 1em;
+}
+
+
+.voteContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+}
