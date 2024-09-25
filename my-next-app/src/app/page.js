@@ -1,11 +1,30 @@
 'use client';
 
 import React from 'react';
+import { useState, useEffect } from 'react'
 import styles from './page.module.css';
 import reviews from './mock_db/reviews.json';
 import movies from './mock_db/movies.json';
 
 export default function Homepage() {
+
+  // const options = {
+  //   method: 'GET',
+  //   headers: {
+  //     accept: 'application/json',
+  //     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTM5NTE2MmJjNDA5MzQ2MTMyNmM5NzUyZTBkZjMzZiIsIm5iZiI6MTcyNzI1NjM4Ny41OTcyMzYsInN1YiI6IjY2Y2RkOWM2NmZkMmYwN2FiNzlkYjE3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n6Dhal1cf-trWSV3ewyYHw9HMouvYGBgv-pqFu3N2B0'
+  //   }
+  // };
+  //   const [movies, setMovies] = useState([]);
+
+  //   useEffect(() => {
+  //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+  //       .then(response => response.json())
+  //       .then(data => setMovies(data))
+  //       .catch(err => console.error(err));
+  //   }, []);
+
+
   return (
     <>
       <hr className={styles.hr}></hr>
