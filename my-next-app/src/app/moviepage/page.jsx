@@ -34,20 +34,19 @@ useEffect(() => {
             {/* Movie Selector */}
             <div>
                 <label>Select a movie: </label>
-                <select value={movieId} onChange={(e) => setMovieId(Number(e.target.value))}>
-                    {movies.map((movie) => (
-                        <option key={movie.id} value={movie.id}>
-                            {movie.title}
-                        </option>
-                    ))}
-                </select>
+                <input
+  type='text'
+  value={movieId}
+  onChange={(e) => setMovieId(Number(e.target.value))}
+/>
             </div>
             {movieData ? (
                 <>
+                    <img src={`https://image.tmdb.org/t/p/w200/${movieData.poster_path}`} alt={movieData.title} width="200" />
                     <h1>{movieData.original_title}</h1>
                     <p>{movieData.overview}</p>
                     <p>Release Date: {movieData.release_date}</p>
-                    <img src={`https://image.tmdb.org/t/p/w200/${movieData.poster_path}`} alt={movieData.title} width="200" />
+                    
                 </>
             ) : (
                 <p>Movie not found</p>
