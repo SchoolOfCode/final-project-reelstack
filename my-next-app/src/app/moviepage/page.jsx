@@ -25,7 +25,7 @@ export default function MoviePage() {
                     <h1>{movie.title}</h1>
                     <p>{movie.overview}</p>
                     <p>Release Date: {movie.release_date}</p>
-                    <img src={movie.poster_path} alt={movie.title} width="200" />
+                    <Image src={movie.poster_path} alt={movie.title} width="200" />
                 </>
             ) : (
                 <p>Movie not found</p>
