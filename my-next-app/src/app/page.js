@@ -4,26 +4,25 @@ import React from 'react';
 import { useState, useEffect } from 'react'
 import styles from './page.module.css';
 import reviews from './mock_db/reviews.json';
-import movies from './mock_db/movies.json';
+import moviesjson from './mock_db/movies.json';
 
 export default function Homepage() {
 
-  // const options = {
-  //   method: 'GET',
-  //   headers: {
-  //     accept: 'application/json',
-  //     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTM5NTE2MmJjNDA5MzQ2MTMyNmM5NzUyZTBkZjMzZiIsIm5iZiI6MTcyNzI1NjM4Ny41OTcyMzYsInN1YiI6IjY2Y2RkOWM2NmZkMmYwN2FiNzlkYjE3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n6Dhal1cf-trWSV3ewyYHw9HMouvYGBgv-pqFu3N2B0'
-  //   }
-  // };
-  //   const [movies, setMovies] = useState([]);
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTM5NTE2MmJjNDA5MzQ2MTMyNmM5NzUyZTBkZjMzZiIsIm5iZiI6MTcyNzI1NjM4Ny41OTcyMzYsInN1YiI6IjY2Y2RkOWM2NmZkMmYwN2FiNzlkYjE3MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.n6Dhal1cf-trWSV3ewyYHw9HMouvYGBgv-pqFu3N2B0'
+    }
+  };
+    const [movies, setMovies] = useState([]);
 
-  //   useEffect(() => {
-  //     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-  //       .then(response => response.json())
-  //       .then(data => setMovies(data))
-  //       .catch(err => console.error(err));
-  //   }, []);
-
+    useEffect(() => {
+      fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+        .then(response => response.json())
+        .then(data => setMovies(data.results))
+        .catch(err => console.error(err));
+    }, []);
 
   return (
     <>
@@ -37,15 +36,14 @@ export default function Homepage() {
       <section>
         <h3>Popular Movies</h3>
         <div className={styles.carousel}>
-          
-          {movies.map((movie, movie_id) => {
-      return (
-        <div key={movie_id} className={styles.movieBox}>
-          <div className={styles.poster}>
-            <img src={movie.posterUrl || "/download.jpeg"} alt={movie.title} />
-          </div>
-          <div className={styles.movieInfo}>
-            <p>{movie.title}</p>
+          {Array.isArray(movies) && movies.map((movie, movie_id) => {
+            return (
+              <div key={movie_id} className={styles.movieBox}>
+                <div className={styles.poster}>
+                  <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
+                </div>
+                <div className={styles.movieInfo}>
+                  <p>{movie.title}</p>
             <p>{'⭐️'.repeat(movie.rating)}</p>
           </div>
         </div>
@@ -62,7 +60,7 @@ export default function Homepage() {
             return (
               <div key={review_id} className={styles.reviewCard}>
                 <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
-                {movies.map((movie, movie_id) => {
+                {moviesjson.map((movie, movie_id) => {
                   return movie.id === review.movie_id && <h5 className={styles.movieTitle} key={movie_id}>{movie.title}</h5>;
                 })}
                 <div className={styles.starsWrapper}>
