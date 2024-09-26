@@ -1,85 +1,85 @@
 /* SearchBar.module.css */
 .searchBar {
-    display: flex;
-    align-items: center;
-    width: 100%; /* Utilize full width within global max-width */
-    position: relative;
-    margin-top: 10px; /* Space between header and search bar */
-    box-sizing: border-box;
-  }
-  
-  .input {
-    flex: 1;
-    padding: 8px 12px;
-    margin-left: 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-    background: #fff;
-    color: #000;
-  }
-  
-  .closeButton {
-    background: transparent;
-    border: none;
-    color: #ff6d00; /* Orange color */
-    margin-left: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .resultsList {
-    list-style: none;
-    margin: 10px 0 0 0;
-    padding: 0;
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1; /* Ensures dropdown appears above content */
-    box-sizing: border-box;
-  }
-  
-  .resultItem {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  .resultItem:hover,
-  .resultItem.highlighted {
-    background-color: #f0f0f0;
-  }
-  
-  .posterImage {
-    width: 60px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-  
-  .movieTitle {
-    font-size: 1rem;
-    color: #000;
-  }
-  
-  /* Optional: Style for the placeholder text */
-  .input::placeholder {
-    color: #888; /* Shades for placeholder text */
-  }
-  
-  .noResults {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #888;
-  }
+  display: flex;
+  align-items: center;
+  width: 100%; /* Utilize full width within global max-width */
+  position: relative;
+  margin-top: 10px; /* Space between header and search bar */
+  box-sizing: border-box;
+}
+
+.input {
+  flex: 1;
+  padding: 8px 12px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #000;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: #ff6d00; /* Orange color */
+  margin-left: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultsList {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1; /* Ensures dropdown appears above content */
+  box-sizing: border-box;
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.resultItem:hover,
+.resultItem.highlighted {
+  background-color: #f0f0f0;
+}
+
+.posterImage {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.movieTitle {
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Optional: Style for the placeholder text */
+.input::placeholder {
+  color: #888; /* Shades for placeholder text */
+}
+
+.noResults {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
