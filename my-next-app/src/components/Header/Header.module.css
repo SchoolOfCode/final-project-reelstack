@@ -73,9 +73,9 @@
 }
 
 .searchButton:focus {
-/* /added to prevent the box of the button from having an outline when clicked,
+  /* /added to prevent the box of the button from having an outline when clicked,
 if you want to see the button being clicked add colour etc as needed. */
-  box-shadow: none
+  box-shadow: none;
 }
 
 .searchButton:focus .iconStroke {
@@ -95,5 +95,3 @@ if you want to see the button being clicked add colour etc as needed. */
 .searchActiveHeader {
   justify-content: flex-start; /* Align items to the left */
 }
-
-

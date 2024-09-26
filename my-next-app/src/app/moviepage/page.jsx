@@ -11,8 +11,7 @@ export default function MoviePage() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:
-        `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
   };
   useEffect(() => {
@@ -28,8 +27,7 @@ export default function MoviePage() {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization:
-        `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
   };
   useEffect(() => {
