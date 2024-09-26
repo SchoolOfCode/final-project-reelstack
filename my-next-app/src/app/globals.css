@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background: linear-gradient(150deg, #001523, #003356, #001523 90%);
   color: #d7dae3;
 }
@@ -30,7 +31,7 @@ p {
 hr {
   border: none;
   height: 3px;
-  background: linear-gradient(90deg, #ff6d00, #ff9e00 );
+  background: linear-gradient(90deg, #ff6d00, #ff9e00);
   margin-top: 2rem;
-  width: 95%
+  width: 95%;
 }

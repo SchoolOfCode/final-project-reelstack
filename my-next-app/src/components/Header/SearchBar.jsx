@@ -1,3 +1,4 @@
+
 'use client'
 import styles from "./SearchBar.module.css";
 import { useState, useEffect, useRef } from 'react';
@@ -171,29 +172,9 @@ const handleKeyDown = (e) => {
   );
 }
 
-//   useEffect(() => {
-//     fetch(`https://api.themoviedb.org/3/search/movie?query=${movieTitle}&language=en-US`, movieSearch)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setMovieTitle(data);
-//         console.log(data);
-//       })
-//       .catch((err) => console.error(err));
-//   }, [movieTitle]);
 
 
-// debounceTimeout.current = setTimeout(() => {
-//   fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(query)}&language=en-US`, movieSearch)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       if (data && data.results) {
-//           setResults(data.results.slice(0, 10));// Limit to 10 results
-//       } else {
-//           setResults([]);
-//       }
-//   })
-//   .catch((err) => {
-//       console.error(err);
-//       setResults([]);
-//   });
-// }, 300);
+
+
+
+

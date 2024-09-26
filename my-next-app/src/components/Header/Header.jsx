@@ -16,9 +16,7 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${isSearchActive ? styles.searchActiveHeader : ''}`}>
-      <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>
-        📽Reel Magic📽
-      </h1>
+      <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>📽Reel Magic📽</h1>
       <button
         aria-label="Open search"
         className={`${styles.searchButton} ${isSearchActive ? styles.searchActive : ''}`}
