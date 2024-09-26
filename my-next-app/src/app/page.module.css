@@ -22,6 +22,7 @@
 
 .poster img {
   border-radius: 10px;
+  width: 175px;
 }
 
 .movieInfo {

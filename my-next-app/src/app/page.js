@@ -24,6 +24,20 @@ export default function Homepage() {
         .catch(err => console.error(err));
     }, []);
 
+    const StarIcon = () => (
+      <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#ff6d00">
+        <path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/>
+      </svg>
+    );
+
+    const renderStars = (rating) => {
+      const stars = [];
+      for (let i = 0; i < Math.round(rating / 2); i++) {
+        stars.push(<StarIcon key={i} className={styles.star} />);
+      }
+      return stars;
+    };
+
   return (
     <>
       <hr className={styles.hr}></hr>
@@ -44,7 +58,7 @@ export default function Homepage() {
                 </div>
                 <div className={styles.movieInfo}>
                   <p>{movie.title}</p>
-            <p>{'⭐️'.repeat(movie.rating)}</p>
+                  <p>{renderStars(movie.vote_average)}</p>
           </div>
         </div>
              );
@@ -65,7 +79,7 @@ export default function Homepage() {
                 })}
                 <div className={styles.starsWrapper}>
                 {[...Array(review.star_rating)].map((_, i) => (
-                  <span key={i}>⭐</span>
+                  <span key={i}><StarIcon /></span>
                 ))}
                 </div>
                 <p>
