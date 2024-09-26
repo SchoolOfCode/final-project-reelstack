@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import reviews from './mock_db/reviews.json';
 import moviesjson from './mock_db/movies.json';
+import HeroSection from '@/components/HeroSection/HeroSection';
 
 export default function Homepage() {
   const options = {
@@ -43,14 +44,7 @@ export default function Homepage() {
   };
   return (
     <>
-      <hr className={styles.hr}></hr>
-      <section className={styles.heroSection}>
-        <h1>Welcome to Reel Magic, the home of movie reviews you can trust.</h1>
-        <div className={styles.taglineContainer}>
-          <h2 className={styles.tagline}>Join the Reel Revolution!</h2>
-        </div>
-      </section>
-      <hr className={styles.hr}></hr>
+      <HeroSection/>
 
       <section>
         <h3>Popular Movies</h3>
