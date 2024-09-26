@@ -7,7 +7,7 @@ import reviews from './mock_db/reviews.json';
 import moviesjson from './mock_db/movies.json';
 
 export default function Homepage() {
-
+  console.log('API Key:', process.env.NEXT_PUBLIC_API_KEY);
 
   const options = {
     method: 'GET',
