@@ -20,7 +20,7 @@ export default function Header() {
         📽Reel Magic📽
       </h1>
       <button
-        aria-label="Search"
+        aria-label="Open search"
         className={`${styles.searchButton} ${isSearchActive ? styles.searchActive : ''}`}
         onClick={!isSearchActive ? handleSearchClick : undefined}
       >
