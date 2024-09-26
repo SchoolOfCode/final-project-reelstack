@@ -7,37 +7,40 @@ import reviews from './mock_db/reviews.json';
 import moviesjson from './mock_db/movies.json';
 
 export default function Homepage() {
-  console.log('API Key:', process.env.NEXT_PUBLIC_API_KEY);
-
   const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`
-    }
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+    },
   };
-    const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
+  useEffect(() => {
+    fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
+      .then((response) => response.json())
+      .then((data) => setMovies(data.results))
+      .catch((err) => console.error(err));
+  }, []);
+  const StarIcon = () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="18px"
+      viewBox="0 -960 960 960"
+      width="18px"
+      fill="#ff6d00"
+    >
+      <path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z" />
+    </svg>
+  );
 
-    useEffect(() => {
-      fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-        .then(response => response.json())
-        .then(data => setMovies(data.results))
-        .catch(err => console.error(err));
-    }, []);
-    const StarIcon = () => (
-      <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" fill="#ff6d00">
-        <path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-523L756-367l4 164q1 35-23 59t-56 24q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-24t-23-59l4-165L95-523q-8-11-11.5-23T80-570q0-25 14.5-46.5T135-647l170-57Zm49 69-194 64 124 179-4 191 200-55 200 56-4-192 124-177-194-66-126-165-126 165Zm126 135Z"/>
-      </svg>
-    );
-
-    const renderStars = (rating) => {
-      const stars = [];
-      for (let i = 0; i < Math.round(rating / 2); i++) {
-        stars.push(<StarIcon key={i} className={styles.star} />);
-      }
-      return stars;
-}
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < Math.round(rating / 2); i++) {
+      stars.push(<StarIcon key={i} className={styles.star} />);
+    }
+    return stars;
+  };
   return (
     <>
       <hr className={styles.hr}></hr>
@@ -52,21 +55,23 @@ export default function Homepage() {
       <section>
         <h3>Popular Movies</h3>
         <div className={styles.carousel}>
-
-          {Array.isArray(movies) && movies.map((movie, movie_id) => {
-            return (
-              <div key={movie_id} className={styles.movieBox}>
-                <div className={styles.poster}>
-                  <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
+          {Array.isArray(movies) &&
+            movies.map((movie, movie_id) => {
+              return (
+                <div key={movie_id} className={styles.movieBox}>
+                  <div className={styles.poster}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  </div>
+                  <div className={styles.movieInfo}>
+                    <p>{movie.title}</p>
+                    <p>{renderStars(movie.vote_average)}</p>
+                  </div>
                 </div>
-                <div className={styles.movieInfo}>
-                  <p>{movie.title}</p>
-                  <p>{renderStars(movie.vote_average)}</p>
-          </div>
-        </div>
-             );
- 
-          })}
+              );
+            })}
         </div>
       </section>
       <hr className={styles.hr}></hr>
@@ -79,12 +84,20 @@ export default function Homepage() {
                 <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
 
                 {moviesjson.map((movie, movie_id) => {
-                  return movie.id === review.movie_id && <h5 className={styles.movieTitle} key={movie_id}>{movie.title}</h5>;
+                  return (
+                    movie.id === review.movie_id && (
+                      <h5 className={styles.movieTitle} key={movie_id}>
+                        {movie.title}
+                      </h5>
+                    )
+                  );
                 })}
                 <div className={styles.starsWrapper}>
-                {[...Array(review.star_rating)].map((_, i) => (
-                  <span key={i}><StarIcon /></span>
-                ))}
+                  {[...Array(review.star_rating)].map((_, i) => (
+                    <span key={i}>
+                      <StarIcon />
+                    </span>
+                  ))}
                 </div>
                 <p>{review.review}</p>
                 <div className={styles.voteContainer}>
