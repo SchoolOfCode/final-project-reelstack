@@ -14,20 +14,26 @@ export default function MoviePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const options = useMemo(() => ({
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-    },
-  }), []);
+  const options = useMemo(
+    () => ({
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+      },
+    }),
+    [],
+  );
 
   useEffect(() => {
     if (!id) return; // Wait until 'id' is available
 
     const fetchMovieData = async () => {
       try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options);
+        const response = await fetch(
+          `https://api.themoviedb.org/3/movie/${id}?language=en-US`,
+          options,
+        );
         if (!response.ok) {
           throw new Error(`Movie HTTP error! status: ${response.status}`);
         }
@@ -47,7 +53,10 @@ export default function MoviePage() {
 
     const fetchReviewData = async () => {
       try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US`, options);
+        const response = await fetch(
+          `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US`,
+          options,
+        );
         if (!response.ok) {
           throw new Error(`Reviews HTTP error! status: ${response.status}`);
         }
@@ -80,6 +89,8 @@ export default function MoviePage() {
         }
         alt={movieData.title}
         className={styles.poster}
+        width={400}
+        height={500}
       />
       <p className={styles.text}>
         <strong>Release Date:</strong> {movieData.release_date}

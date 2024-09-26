@@ -7,14 +7,16 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import Image from 'next/image';
 
 export default function Homepage() {
-  
-  const options = useMemo(() => ({
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-    },
-  }), []);
+  const options = useMemo(
+    () => ({
+      method: 'GET',
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+      },
+    }),
+    [],
+  );
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
@@ -29,33 +31,31 @@ export default function Homepage() {
 
   const upvoteReview = (reviewId) => {
     if (votedReviews.has(reviewId)) return; // Prevent multiple votes
-  
+
     setReviews((prevReviews) => {
-      return prevReviews.map(review =>
+      return prevReviews.map((review) =>
         review.review_id === reviewId
           ? { ...review, weighting: parseInt(review.weighting) + 1 }
-          : review
+          : review,
       );
     });
-  
-    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
-  };
-  
-  const downvoteReview = (reviewId) => {
-    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
-  
-    setReviews((prevReviews) => {
-      return prevReviews.map(review =>
-        review.review_id === reviewId
-          ? { ...review, weighting: parseInt(review.weighting) - 1 }
-          : review
-      );
-    });
-  
+
     setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
   };
 
-  
+  const downvoteReview = (reviewId) => {
+    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
+
+    setReviews((prevReviews) => {
+      return prevReviews.map((review) =>
+        review.review_id === reviewId
+          ? { ...review, weighting: parseInt(review.weighting) - 1 }
+          : review,
+      );
+    });
+
+    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
+  };
 
   const sortedReviews = reviews.sort((a, b) => b.weighting - a.weighting);
   const renderStars = (rating) => {
@@ -76,6 +76,8 @@ export default function Homepage() {
                   <Image
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                     alt={movie.title}
+                    width={200}
+                    height={250}
                   />
                 </div>
                 <div className={styles.movieInfo}>
@@ -94,9 +96,7 @@ export default function Homepage() {
             <div key={review.review_id} className={styles.reviewCard}>
               <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
               <h5 className={styles.movieTitle}>{review.movie_name}</h5>
-              <div className={styles.starsWrapper}>
-                {renderStars(review.star_rating)}
-              </div>
+              <div className={styles.starsWrapper}>{renderStars(review.star_rating)}</div>
               <p className={styles.review}>{review.review}</p>
               <div className={styles.voteContainer}>
                 <span>
