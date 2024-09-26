@@ -11,14 +11,28 @@
 }
 
 .title {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  max-width: 300px;
   margin: 0;
-  font-size: 1.5rem;/*CHECK WITH JAMES IF THIS OK*/
+  font-size: 1.5rem; /*CHECK WITH JAMES IF THIS OK*/
   color: #fff;
   letter-spacing: 0.2em;
   flex: 1;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; /* Prevent text overflow */
+  text-decoration: none; /* Remove underline */
+}
+
+.link {
+  text-decoration: none; /* Remove underline */
+  border: none; /* Remove border */
+}
+
+.hidden {
+  display: none; /* Hide the element */
 }
 
 .searchButton {
