@@ -10,7 +10,7 @@ export default function HeroSection() {
     'Welcome to Reel Magic, the home of movie reviews you can trust.',
     'Join the Reel Revolution!',
     'A new way to share your thoughts.',
-    'Reel people, reel reviews, reel magic.',
+    'Reel people, Reel reviews, Reel magic.',
   ];
   const typingSpeed = 80; // Speed of typing each character
   const pauseBetweenMessages = 1000; // Pause between messages
