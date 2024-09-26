@@ -61,8 +61,8 @@
   }
   
   .posterImage {
-    width: 40px;
-    height: 60px;
+    width: 60px;
+    height: 90px;
     object-fit: cover;
     border-radius: 4px;
     margin-right: 10px;
