@@ -2,11 +2,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import styles from './page.module.css';
 import reviewsData from './mock_db/reviews.json';
-import moviesjson from './mock_db/movies.json';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Image from 'next/image';
 
 export default function Homepage() {
+  
   const options = useMemo(
     () => ({
       method: 'GET',
@@ -17,7 +17,6 @@ export default function Homepage() {
     }),
     [],
   );
-
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
       .then((response) => response.json())
@@ -27,37 +26,40 @@ export default function Homepage() {
 
   const [movies, setMovies] = useState([]);
   const [reviews, setReviews] = useState(reviewsData);
-  const [votedReviews, setVotedReviews] = useState(new Set());
+  const [votedReviews, setVotedReviews] = useState(new Map());
 
   const upvoteReview = (reviewId) => {
-    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
 
-    setReviews((prevReviews) => {
-      return prevReviews.map((review) =>
-        review.review_id === reviewId
-          ? { ...review, weighting: parseInt(review.weighting) + 1 }
-          : review,
-      );
-    });
-
-    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
+    if (!votedReviews.has(reviewId)) {
+      setVotedReviews(new Map(votedReviews.set(reviewId, 'upvote')));
+      upvoteReview(reviewId);
+      setReviews((prevReviews) => {
+        return prevReviews.map((review) =>
+          review.review_id === reviewId
+            ? { ...review, weighting: parseInt(review.weighting) + 1 }
+            : review,
+        );
+      });
+    }
   };
 
   const downvoteReview = (reviewId) => {
-    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
 
-    setReviews((prevReviews) => {
-      return prevReviews.map((review) =>
-        review.review_id === reviewId
-          ? { ...review, weighting: parseInt(review.weighting) - 1 }
-          : review,
-      );
-    });
-
-    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
+    if (!votedReviews.has(reviewId)) {
+      setVotedReviews(new Map(votedReviews.set(reviewId, 'downvote')));
+      downvoteReview(reviewId);
+      setReviews((prevReviews) => {
+        return prevReviews.map((review) =>
+          review.review_id === reviewId
+            ? { ...review, weighting: parseInt(review.weighting) - 1 }
+            : review,
+        );
+      });
+    }
   };
-
+ 
   const sortedReviews = reviews.sort((a, b) => b.weighting - a.weighting);
+  
   const renderStars = (rating) => {
     return [...Array(Math.round(rating / 2))].map((_, i) => (
       <StarIcon key={i} className={styles.star} />
@@ -66,7 +68,7 @@ export default function Homepage() {
   return (
     <>
       <HeroSection />
-      <section>
+      <section className={styles.popularSection}>
         <h3>Popular Movies</h3>
         <div className={styles.carousel}>
           {Array.isArray(movies) &&
@@ -74,15 +76,16 @@ export default function Homepage() {
               <div key={index} className={styles.movieBox}>
                 <div className={styles.poster}>
                   <Image
-                    src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                     alt={movie.title}
-                    width={200}
-                    height={250}
+                    width={184}
+                    height={256}
+                    priority={index === 0}
                   />
                 </div>
                 <div className={styles.movieInfo}>
                   <p>{movie.title}</p>
-                  <p>{renderStars(movie.vote_average)}</p>
+                  <p className={styles.posterStars}>{renderStars(movie.vote_average)}</p>
                 </div>
               </div>
             ))}
@@ -106,7 +109,7 @@ export default function Homepage() {
                     height="24px"
                     viewBox="0 -960 960 960"
                     width="24px"
-                    fill="#D7DAE3"
+                    fill={votedReviews.get(review.review_id) === 'upvote' ? '#ff9e00' : '#d7dae3' }
                     onClick={() => upvoteReview(review.review_id)}
                   >
                     <path d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
@@ -118,7 +121,7 @@ export default function Homepage() {
                     height="24px"
                     viewBox="0 -960 960 960"
                     width="24px"
-                    fill="#D7DAE3"
+                    fill={votedReviews.get(review.review_id) === 'downvote' ? '#ff9e00' : '#d7dae3' }
                     onClick={() => downvoteReview(review.review_id)}
                   >
                     <path d="M240-840h440v520L400-40l-50-50q-7-7-11.5-19t-4.5-23v-14l44-174H120q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14Zm360 80H240L120-480v80h360l-54 220 174-174v-406Zm0 406v-406 406Zm80 34v-80h120v-360H680v-80h200v520H680Z" />
