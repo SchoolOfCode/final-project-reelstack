@@ -81,17 +81,19 @@ export default function MoviePage() {
     <div className={styles.wrapper}>
       {/* Movie Details */}
       <h1 className={styles.text}>{movieData.title}</h1>
-      <Image
-        src={
-          movieData.poster_path
-            ? `https://image.tmdb.org/t/p/w300${movieData.poster_path}`
-            : '/no-image-available.png'
-        }
-        alt={movieData.title}
-        className={styles.poster}
-        width={400}
-        height={500}
-      />
+      <div className={styles.posterContainer}>
+        <Image
+          src={
+            movieData.poster_path
+              ? `https://image.tmdb.org/t/p/w300${movieData.poster_path}`
+              : '/no-image-available.png'
+          }
+          alt={movieData.title}
+          className={styles.poster}
+          width={300}
+          height={450}
+        />
+      </div>
       <p className={styles.text}>
         <strong>Release Date:</strong> {movieData.release_date}
       </p>

@@ -59,7 +59,7 @@
 
 .poster {
   display: block; /* Makes the image a block-level element */
-  width: 300px; /* Maintains the width of the poster */
+  /* width: 300px; Maintains the width of the poster */
   border-radius: 8px; /* Keeps the existing border radius */
   margin: 0 auto 1rem auto; /* Centers the image horizontally and adds bottom margin */
 }
