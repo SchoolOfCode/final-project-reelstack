@@ -1,7 +1,8 @@
 'use client'
 import styles from "./SearchBar.module.css";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function SearchBar({ onClose }) {
   const [query, setQuery] = useState("");
@@ -13,14 +14,13 @@ export default function SearchBar({ onClose }) {
 
   const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w200';//change size as needed
 
-  const movieSearch = {
+  const movieSearch = useMemo(() => ({
     method: 'GET',
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
-    
-    },
-  };
+    }
+  }), []);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -62,7 +62,7 @@ export default function SearchBar({ onClose }) {
   return () => {
     clearTimeout(debounceTimeout.current);
   };
-}, [query]);
+}, [query, movieSearch]);
 
 const handleInputChange = (e) => {
     setQuery(e.target.value);
@@ -70,7 +70,7 @@ const handleInputChange = (e) => {
 };
 
 const handleSelect = (movie) => {
-    console.log("Selected movie:", movie);
+    // console.log("Selected movie:", movie);
     setQuery(movie.title);
     setResults([]);
     onClose();//optional
@@ -152,7 +152,7 @@ const handleKeyDown = (e) => {
               onMouseEnter={() => setHighlightedIndex(index)}
               onMouseLeave={() => setHighlightedIndex(-1)}
             >
-              <img 
+              <Image 
                 src={movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : '/no-image-available.png'} 
                 alt={movie.title} 
                 className={styles.posterImage}

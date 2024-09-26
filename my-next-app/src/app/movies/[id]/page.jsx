@@ -1,8 +1,9 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import styles from './page.module.css'; // Ensure the correct import path
+import Image from 'next/image';
 
 export default function MoviePage() {
   const params = useParams(); // Access route parameters
@@ -13,13 +14,13 @@ export default function MoviePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const options = {
+  const options = useMemo(() => ({
     method: 'GET',
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
-  };
+  }), []);
 
   useEffect(() => {
     if (!id) return; // Wait until 'id' is available
@@ -39,7 +40,7 @@ export default function MoviePage() {
     };
 
     fetchMovieData();
-  }, [id]);
+  }, [id, options]);
 
   useEffect(() => {
     if (!id) return; // Wait until 'id' is available
@@ -61,7 +62,7 @@ export default function MoviePage() {
     };
 
     fetchReviewData();
-  }, [id]);
+  }, [id, options]);
 
   if (loading) return <p className={styles.text}>Loading...</p>;
   if (error) return <p className={styles.text}>Error: {error}</p>;
@@ -71,7 +72,7 @@ export default function MoviePage() {
     <div className={styles.wrapper}>
       {/* Movie Details */}
       <h1 className={styles.text}>{movieData.title}</h1>
-      <img
+      <Image
         src={
           movieData.poster_path
             ? `https://image.tmdb.org/t/p/w300${movieData.poster_path}`

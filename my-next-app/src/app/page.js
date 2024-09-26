@@ -1,24 +1,27 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import styles from './page.module.css';
 import reviewsData from './mock_db/reviews.json';
 import moviesjson from './mock_db/movies.json';
 import HeroSection from '@/components/HeroSection/HeroSection';
+import Image from 'next/image';
+
 export default function Homepage() {
   
-  const options = {
+  const options = useMemo(() => ({
     method: 'GET',
     headers: {
       accept: 'application/json',
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
-  };
+  }), []);
+
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
       .then((response) => response.json())
       .then((data) => setMovies(data.results))
       .catch((err) => console.error(err));
-  }, []);
+  }, [options]);
 
   const [movies, setMovies] = useState([]);
   const [reviews, setReviews] = useState(reviewsData);
@@ -70,7 +73,7 @@ export default function Homepage() {
             movies.map((movie, index) => (
               <div key={index} className={styles.movieBox}>
                 <div className={styles.poster}>
-                  <img
+                  <Image
                     src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                     alt={movie.title}
                   />
