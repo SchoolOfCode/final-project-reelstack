@@ -93,20 +93,18 @@ if you want to see the button being clicked add colour etc as needed. */
   justify-content: flex-start; /* Align items to the left */
 }
 
-.logoContainer{
-
+.logoContainer {
   display: flex;
   align-items: left;
-  gap:10px;
-
+  gap: 10px;
 }
-.logocContainer img{
-  border-radius: 20px;;
+.logocContainer img {
+  border-radius: 20px;
 }
 
-.logo{
-  width:35px;
-  height:35px;
+.logo {
+  width: 35px;
+  height: 35px;
   object-fit: contain;
 }
 .searchContainer {
