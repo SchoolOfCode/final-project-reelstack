@@ -1,5 +1,39 @@
 .footerContainer {
-  background-color: grey;
-  padding: 3em;
-  color: white;
+  background-color: #00111c;
+  padding: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.namesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 300px;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+.memberSection p {
+  font-weight: 200;
+}
+
+.memberSection a {
+  margin-top: -1rem;
+  color: #ff6d00;
+  text-decoration: none;
+  transition: 0.3s color ease;
+}
+
+.memberSection a:hover {
+  color: #00406c;
+}
+
+.linkedin {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
