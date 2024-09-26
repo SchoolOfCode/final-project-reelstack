@@ -4,13 +4,13 @@
   align-items: center;
   width: 100%; /* Utilize full width within global max-width */
   position: relative;
-  margin-top: 10px; /* Space between header and search bar */
+  margin-top: 0px; /* Space between header and search bar */
   box-sizing: border-box;
 }
 
 .input {
   flex: 1;
-  padding: 8px 12px;
+  padding: 10px 12px;
   margin-left: 20px;
   border: none;
   border-radius: 4px;
@@ -36,7 +36,7 @@
   margin: 10px 0 0 0;
   padding: 0;
   width: 100%;
-  max-height: 200px;
+  max-height: 400px;
   overflow-y: auto;
   background: #fff;
   border: 1px solid #ccc;

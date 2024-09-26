@@ -11,28 +11,15 @@
 }
 
 .title {
-  display: flex;
-  border: none;
-  background-color: transparent;
-  max-width: 300px;
   margin: 0;
-  font-size: 1.5rem; /*CHECK WITH JAMES IF THIS OK*/
+  font-size: 1.5rem;/*CHECK WITH JAMES IF THIS OK*/
+  font-weight: 500;
   color: #fff;
   letter-spacing: 0.2em;
   flex: 1;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; /* Prevent text overflow */
-  text-decoration: none; /* Remove underline */
-}
-
-.link {
-  text-decoration: none; /* Remove underline */
-  border: none; /* Remove border */
-}
-
-.hidden {
-  display: none; /* Hide the element */
 }
 
 .searchButton {
@@ -61,37 +48,13 @@
 }
 
 .iconStroke {
-  stroke: #fff; /* Set stroke color to white */
+  stroke: #ff9e00; /* Set stroke color to white */
 }
 
-.searchButton:hover .iconStroke {
-  stroke: #e0e0e0; /* Lighten stroke color on hover */
+.activeIcon {
+  stroke: #ff9e00; /* Stroke color when the icon is active */
 }
 
-.searchButton:active .iconStroke {
-  stroke: #c0c0c0; /* Darken stroke color when active (clicked) */
-}
-
-.searchButton:focus {
-  /* /added to prevent the box of the button from having an outline when clicked,
-if you want to see the button being clicked add colour etc as needed. */
-  box-shadow: none;
-}
-
-.searchButton:focus .iconStroke {
-  stroke: #fff; /* Ensure stroke remains white on focus */
-}
-
-/* Shift search button to the left when active */
-.searchActive {
-  margin-left: 0;
-  position: absolute;
-  left: 15px; /* Move to the left side */
-  right: auto;
-  transform: translateX(0);
-}
-
-/* Adjust header's justify-content when search is active */
-.searchActiveHeader {
-  justify-content: flex-start; /* Align items to the left */
+.searchActiveHeader .searchButton svg {
+  stroke: #ff9e00; /* Stroke color when search is active */
 }
