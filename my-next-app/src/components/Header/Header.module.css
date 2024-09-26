@@ -92,3 +92,24 @@ if you want to see the button being clicked add colour etc as needed. */
 .searchActiveHeader {
   justify-content: flex-start; /* Align items to the left */
 }
+
+.logoContainer{
+
+  display: flex;
+  align-items: left;
+  gap:10px;
+
+}
+.logocContainer img{
+  border-radius: 20px;;
+}
+
+.logo{
+  width:35px;
+  height:35px;
+  object-fit: contain;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
