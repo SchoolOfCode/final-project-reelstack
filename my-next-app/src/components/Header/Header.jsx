@@ -2,6 +2,7 @@
 import styles from './Header.module.css'; // Import CSS Modules
 import { useState } from 'react';
 import SearchBar from './SearchBar.jsx';
+import Link from 'next/link';
 
 export default function Header() {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -16,7 +17,9 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${isSearchActive ? styles.searchActiveHeader : ''}`}>
-      <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>📽Reel Magic📽</h1>
+      <Link href="/" className={styles.link}>
+        <h1 className={`${styles.title} ${isSearchActive ? styles.hidden : ''}`}>📽Reel Magic📽</h1>
+      </Link>
       <button
         aria-label="Open search"
         className={`${styles.searchButton} ${isSearchActive ? styles.searchActive : ''}`}
