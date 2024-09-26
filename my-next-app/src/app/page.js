@@ -5,6 +5,7 @@ import reviewsData from './mock_db/reviews.json';
 import moviesjson from './mock_db/movies.json';
 import HeroSection from '@/components/HeroSection/HeroSection';
 export default function Homepage() {
+  
   const options = {
     method: 'GET',
     headers: {
@@ -12,15 +13,20 @@ export default function Homepage() {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
     },
   };
-  const [movies, setMovies] = useState([]);
-  const [reviews, setReviews] = useState(reviewsData);
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
       .then((response) => response.json())
       .then((data) => setMovies(data.results))
       .catch((err) => console.error(err));
   }, []);
+
+  const [movies, setMovies] = useState([]);
+  const [reviews, setReviews] = useState(reviewsData);
+  const [votedReviews, setVotedReviews] = useState(new Set());
+
   const upvoteReview = (reviewId) => {
+    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
+  
     setReviews((prevReviews) => {
       return prevReviews.map(review =>
         review.review_id === reviewId
@@ -28,8 +34,13 @@ export default function Homepage() {
           : review
       );
     });
+  
+    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
   };
+  
   const downvoteReview = (reviewId) => {
+    if (votedReviews.has(reviewId)) return; // Prevent multiple votes
+  
     setReviews((prevReviews) => {
       return prevReviews.map(review =>
         review.review_id === reviewId
@@ -37,7 +48,12 @@ export default function Homepage() {
           : review
       );
     });
+  
+    setVotedReviews((prevVotedReviews) => new Set(prevVotedReviews).add(reviewId));
   };
+
+  
+
   const sortedReviews = reviews.sort((a, b) => b.weighting - a.weighting);
   const renderStars = (rating) => {
     return [...Array(Math.round(rating / 2))].map((_, i) => (
