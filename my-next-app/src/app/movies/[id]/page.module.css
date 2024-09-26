@@ -1,0 +1,34 @@
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(150deg, #001523, #003356, #001523 90%);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  
+  .posteridsection {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  .steph1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .p2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .strongidsection {
+    color: #ff6d00;
+  }
