@@ -8,8 +8,17 @@ export default function Footer() {
         {teamMembers.map((member, index) => (
           <div key={index} className={styles.memberSection}>
             <p>{member.name}</p>
-            <a href={member.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a className={styles.linkedin} href={member.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={member.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a
+              className={styles.linkedin}
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
         ))}
       </div>

@@ -6,12 +6,15 @@ export default function HeroSection() {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0); // Track the current message
   const [charIndex, setCharIndex] = useState(0); // Track character typing
   const [isTyping, setIsTyping] = useState(true); // Track if typing is in progress
-  const messages = useMemo(() => [
-    'Welcome to Reel Magic, the home of movie reviews you can trust.',
-    'Join the Reel Revolution!',
-    'A new way to share your thoughts.',
-    'Reel people, Reel reviews, Reel magic.',
-  ], []);
+  const messages = useMemo(
+    () => [
+      'Welcome to Reel Magic, the home of movie reviews you can trust.',
+      'Join the Reel Revolution!',
+      'A new way to share your thoughts.',
+      'Reel people, Reel reviews, Reel magic.',
+    ],
+    [],
+  );
   const typingSpeed = 80; // Speed of typing each character
   const pauseBetweenMessages = 1000; // Pause between messages
 
