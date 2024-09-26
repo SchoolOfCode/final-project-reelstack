@@ -20,7 +20,7 @@ export default function MoviePage() {
       .then((response) => response.json())
       .then((data) => {
         setMovieData(data);
-        //console.log(data);
+        console.log(data);
       })
       .catch((err) => console.error(err));
   }, [movieId]);
@@ -37,7 +37,7 @@ export default function MoviePage() {
       .then((response) => response.json())
       .then((data) => {
         setReviewData(data);
-        //console.log(data);
+        console.log(data);
       })
       .catch((err) => console.error(err));
   }, [movieId]);
@@ -62,18 +62,29 @@ export default function MoviePage() {
       ) : (
         <p>Movie not found</p>
       )}
-      <h2 className={styles.text}>Reviews</h2>
-      {reviewData && reviewData.results && reviewData.results.length > 0 ? (
-        reviewData.results.map((review) => (
-          <div className={styles.text} key={review.id}>
-            <h3>{review.author}</h3>
-            <h3>Rating: {review.author_details?.rating ?? 'No rating'}</h3>
-            <p>{review.content}</p>
-          </div>
-        ))
-      ) : (
-        <p className={styles.text}>No reviews found for this movie</p>
-      )}
+      <div className={styles.wrapperReview}>
+        <h2 className={styles.text}>Reviews</h2>
+        <div className={styles.reviewScroll}>
+          {reviewData && reviewData.results && reviewData.results.length > 0 ? (
+            reviewData.results.map((review) => (
+              <div className={styles.reviewCard} key={review.id}>
+                <h3>{review.author}</h3>
+                <h3>Rating: {review.author_details?.rating ?? 'No rating'}</h3>
+                <p>
+                  {review.content.split('\n').map((paragraph, index) => (
+                    <React.Fragment key={index}>
+                      {paragraph}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
+            ))
+          ) : (
+            <p className={styles.text}>No reviews found for this movie</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
