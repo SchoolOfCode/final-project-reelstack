@@ -7,3 +7,9 @@ https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-13-Project?node-id=47-12
 ## Article
 
 https://www.canva.com/design/DAGRlRNXKwE/mAQMK2peDi0P8vbUyqKFtQ/view?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
+**FINAL PROJECT URL***
+https://final-project-reelstack-nfzi.onrender.com
+
+**Presentation Link- viewable**
+https://gamma.app/docs/ReelStack-10a3sjrbvfhthuw
