@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import reviewsData from './mock_db/reviews.json';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Image from 'next/image';
+import Link from 'next/link'
 
 export default function Homepage() {
   
@@ -27,12 +28,29 @@ export default function Homepage() {
   const [movies, setMovies] = useState([]);
   const [reviews, setReviews] = useState(reviewsData);
   const [votedReviews, setVotedReviews] = useState(new Map());
-
+  
   const upvoteReview = (reviewId) => {
-
-    if (!votedReviews.has(reviewId)) {
-      setVotedReviews(new Map(votedReviews.set(reviewId, 'upvote')));
-      upvoteReview(reviewId);
+    if (votedReviews.get(reviewId) === 'upvote') {
+      // Remove upvote
+      setVotedReviews((prevVotedReviews) => {
+        const newVotedReviews = new Map(prevVotedReviews);
+        newVotedReviews.delete(reviewId);
+        return newVotedReviews;
+      });
+      setReviews((prevReviews) => {
+        return prevReviews.map((review) =>
+          review.review_id === reviewId
+            ? { ...review, weighting: parseInt(review.weighting) - 1 }
+            : review,
+        );
+      });
+    } else {
+      // Add upvote
+      setVotedReviews((prevVotedReviews) => {
+        const newVotedReviews = new Map(prevVotedReviews);
+        newVotedReviews.set(reviewId, 'upvote');
+        return newVotedReviews;
+      });
       setReviews((prevReviews) => {
         return prevReviews.map((review) =>
           review.review_id === reviewId
@@ -42,12 +60,29 @@ export default function Homepage() {
       });
     }
   };
-
+  
   const downvoteReview = (reviewId) => {
-
-    if (!votedReviews.has(reviewId)) {
-      setVotedReviews(new Map(votedReviews.set(reviewId, 'downvote')));
-      downvoteReview(reviewId);
+    if (votedReviews.get(reviewId) === 'downvote') {
+      // Remove downvote
+      setVotedReviews((prevVotedReviews) => {
+        const newVotedReviews = new Map(prevVotedReviews);
+        newVotedReviews.delete(reviewId);
+        return newVotedReviews;
+      });
+      setReviews((prevReviews) => {
+        return prevReviews.map((review) =>
+          review.review_id === reviewId
+            ? { ...review, weighting: parseInt(review.weighting) + 1 }
+            : review,
+        );
+      });
+    } else {
+      // Add downvote
+      setVotedReviews((prevVotedReviews) => {
+        const newVotedReviews = new Map(prevVotedReviews);
+        newVotedReviews.set(reviewId, 'downvote');
+        return newVotedReviews;
+      });
       setReviews((prevReviews) => {
         return prevReviews.map((review) =>
           review.review_id === reviewId
@@ -57,7 +92,7 @@ export default function Homepage() {
       });
     }
   };
- 
+
   const sortedReviews = reviews.sort((a, b) => b.weighting - a.weighting);
   
   const renderStars = (rating) => {
@@ -71,9 +106,9 @@ export default function Homepage() {
       <section className={styles.popularSection}>
         <h3>Popular Movies</h3>
         <div className={styles.carousel}>
-          {Array.isArray(movies) &&
+        {Array.isArray(movies) &&
             movies.map((movie, index) => (
-              <div key={index} className={styles.movieBox}>
+              <Link key={index} href={`/movies/${movie.id}`} className={styles.movieBox} style={{ textDecoration: 'none', color: '#d7dae3' }}>
                 <div className={styles.poster}>
                   <Image
                     src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
@@ -87,7 +122,7 @@ export default function Homepage() {
                   <p>{movie.title}</p>
                   <p className={styles.posterStars}>{renderStars(movie.vote_average)}</p>
                 </div>
-              </div>
+              </Link>
             ))}
         </div>
       </section>
