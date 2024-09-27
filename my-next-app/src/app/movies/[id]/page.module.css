@@ -63,10 +63,10 @@
   left: 13%;
   width: 75%;
   height: 75%;
-  background-size:auto;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.25;
   z-index: 0;
   border-radius: 10px;
 }
