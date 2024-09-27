@@ -19,6 +19,7 @@
     width: 90%;
     height: 90%;
     position: relative;
+    border-radius: 10px;
   }
   
   .closeButton {
