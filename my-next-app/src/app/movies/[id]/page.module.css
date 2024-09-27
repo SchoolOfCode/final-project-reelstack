@@ -57,13 +57,6 @@
   white-space: pre-wrap;
 }
 
-.movieBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
 .poster {
   display: block;
   border-radius: 10px; 
