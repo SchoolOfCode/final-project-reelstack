@@ -57,9 +57,30 @@
   white-space: pre-wrap;
 }
 
-.poster {
-  display: block;
-  border-radius: 10px; 
-  margin: 0 auto;
+/* Add this new class for the backdrop */
+.backdrop {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0; /* Ensure it is behind other content */
 }
 
+.movieBox {
+  position: relative; /* Ensure the movieBox content is above the backdrop */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.poster {
+  display: block;
+  border-radius: 10px;
+  margin: 0 auto;
+}

@@ -79,6 +79,9 @@ export default function MoviePage() {
 
   return (
     <div className={styles.wrapper}>
+      {/* Backdrop */}
+      <div className={styles.backdrop} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w300${movieData.poster_path})` }}></div>
+      
       {/* Movie Details */}
       <h1 className={styles.text}>{movieData.title}</h1>
       <div className={styles.movieBox}>
