@@ -5,6 +5,7 @@ import reviewsData from './mock_db/reviews.json';
 import HeroSection from '@/components/HeroSection/HeroSection';
 import Image from 'next/image';
 import Link from 'next/link'
+import Modal from '../components/Modal/Modal.jsx'
 
 export default function Homepage() {
   
@@ -28,8 +29,21 @@ export default function Homepage() {
   const [movies, setMovies] = useState([]);
   const [reviews, setReviews] = useState(reviewsData);
   const [votedReviews, setVotedReviews] = useState(new Map());
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedReview, setSelectedReview] = useState(null);
+
+  const handleReviewClick = (review) => {
+    setSelectedReview(review);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedReview(null);
+  };
   
-  const upvoteReview = (reviewId) => {
+  const upvoteReview = (reviewId, event) => {
+    event.stopPropagation();
     if (votedReviews.get(reviewId) === 'upvote') {
       // Remove upvote
       setVotedReviews((prevVotedReviews) => {
@@ -61,7 +75,8 @@ export default function Homepage() {
     }
   };
   
-  const downvoteReview = (reviewId) => {
+  const downvoteReview = (reviewId, event) => {
+    event.stopPropagation();
     if (votedReviews.get(reviewId) === 'downvote') {
       // Remove downvote
       setVotedReviews((prevVotedReviews) => {
@@ -131,7 +146,7 @@ export default function Homepage() {
         <h3>Check out the hottest reviews from the community...</h3>
         <div className={styles.reviewsContainer}>
           {sortedReviews.map((review) => (
-            <div key={review.review_id} className={styles.reviewCard}>
+            <div key={review.review_id} className={styles.reviewCard} onClick={() => handleReviewClick(review)}>
               <h4 className={styles.reviewerName}>{review.reviewer_name}</h4>
               <h5 className={styles.movieTitle}>{review.movie_name}</h5>
               <div className={styles.starsWrapper}>{renderStars(review.star_rating)}</div>
@@ -145,7 +160,7 @@ export default function Homepage() {
                     viewBox="0 -960 960 960"
                     width="24px"
                     fill={votedReviews.get(review.review_id) === 'upvote' ? '#ff9e00' : '#d7dae3' }
-                    onClick={() => upvoteReview(review.review_id)}
+                    onClick={(event) => upvoteReview(review.review_id, event)}
                   >
                     <path d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z" />
                   </svg>
@@ -157,7 +172,7 @@ export default function Homepage() {
                     viewBox="0 -960 960 960"
                     width="24px"
                     fill={votedReviews.get(review.review_id) === 'downvote' ? '#ff9e00' : '#d7dae3' }
-                    onClick={() => downvoteReview(review.review_id)}
+                    onClick={(event) => downvoteReview(review.review_id, event)}
                   >
                     <path d="M240-840h440v520L400-40l-50-50q-7-7-11.5-19t-4.5-23v-14l44-174H120q-32 0-56-24t-24-56v-80q0-7 2-15t4-15l120-282q9-20 30-34t44-14Zm360 80H240L120-480v80h360l-54 220 174-174v-406Zm0 406v-406 406Zm80 34v-80h120v-360H680v-80h200v520H680Z" />
                   </svg>
@@ -167,6 +182,16 @@ export default function Homepage() {
           ))}
         </div>
       </section>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        {selectedReview && (
+          <div>
+            <h3>{selectedReview.reviewer_name}</h3>
+            <h4>{selectedReview.movie_name}</h4>
+            <div>{renderStars(selectedReview.star_rating)}</div>
+            <p>{selectedReview.review}</p>
+          </div>
+        )}
+      </Modal>
     </>
   );
 }
