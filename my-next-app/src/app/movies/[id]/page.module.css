@@ -57,26 +57,26 @@
   white-space: pre-wrap;
 }
 
-/* Add this new class for the backdrop */
 .backdrop {
   position: absolute;
   top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
+  left: 13%;
+  width: 75%;
+  height: 75%;
+  background-size:auto;
   background-position: center;
-  opacity: 0.1;
-  z-index: 0; /* Ensure it is behind other content */
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  border-radius: 10px;
 }
 
 .movieBox {
-  position: relative; /* Ensure the movieBox content is above the backdrop */
+  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 2rem;
 }
 
 .poster {
