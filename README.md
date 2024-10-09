@@ -45,10 +45,10 @@ Empower everyday users to take control of the film review process. We built a mo
 <summary>Features</summary>
 <br>
 
-<img src="https://github.com/user-attachments/assets/1e9d6d21-c431-407d-8062-a3811be16183" width=500 />
-<img src="https://github.com/user-attachments/assets/f39f6148-127b-4646-b0f3-fa376111c80c" width=500 />
-<img src="https://github.com/user-attachments/assets/93486374-0437-4068-b958-8616019cdd08" width=500 />
-<img src="https://github.com/user-attachments/assets/f0bc6402-79f1-478c-9291-4ace93f419a1" width=500 />
+<img src="https://github.com/user-attachments/assets/1e9d6d21-c431-407d-8062-a3811be16183" width=300 />
+<img src="https://github.com/user-attachments/assets/f39f6148-127b-4646-b0f3-fa376111c80c" width=300 />
+<img src="https://github.com/user-attachments/assets/93486374-0437-4068-b958-8616019cdd08" width=300 />
+<img src="https://github.com/user-attachments/assets/f0bc6402-79f1-478c-9291-4ace93f419a1" width=300 />
 
 </details>
 
