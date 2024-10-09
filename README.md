@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/2b8e5fe1-3d9f-450d-8002-18b18d872319" />
 </div>
 
-# Readme Plan
+<!-- # Readme Plan
 - About section
   - Overview
   - Mission Statement
@@ -23,7 +23,7 @@
   - Gamma
 - Team
   - Links (Linkedin, Github)
-
+-->
 # Reel Magic
 by ReelStack
 
