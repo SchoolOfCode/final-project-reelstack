@@ -32,26 +32,21 @@ by ReelStack
 <h3>Overview</h3>
 Reel Magic is a community-driven platform where users control the reviews, allowing them to discover films that suit their tastes through honest, peer-based opinions. By making the review process transparent and focusing on user interaction, we aim to improve the film review experience, which is often dominated by professional critics.
 
-<h3>Our mission is simple:</h3> 
-Empower everyday users to take control of the film review process. We built a mobile-first platform, acknowledging that 91% of internet traffic is on mobile. Our goal is to reduce browsing time and deliver personalized, trustworthy movie recommendations.
+<h3>Our mission</h3> 
+Empower everyday users to take control of the film review process. We built a mobile-first platform, acknowledging that 91% of internet traffic is on smartphones. Our goal is to reduce browsing time and deliver personalized, trustworthy movie recommendations.
 
-<h3>Press Release</h3>
-<a href="https://www.canva.com/design/DAGRlRNXKwE/mAQMK2peDi0P8vbUyqKFtQ/view?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link&utm_source=editor">Article</a>
-
-<br>
+<br><br>
 
 <details open>
-  
-<summary>Features</summary>
+  <summary>Features</summary>
 <br>
-
-<img src="https://github.com/user-attachments/assets/1e9d6d21-c431-407d-8062-a3811be16183" width=400 />
-<img src="https://github.com/user-attachments/assets/f39f6148-127b-4646-b0f3-fa376111c80c" width=400 />
-<img src="https://github.com/user-attachments/assets/93486374-0437-4068-b958-8616019cdd08" width=400 />
-<img src="https://github.com/user-attachments/assets/f0bc6402-79f1-478c-9291-4ace93f419a1" width=400 />
-
+  <img src="https://github.com/user-attachments/assets/1e9d6d21-c431-407d-8062-a3811be16183" width=400 />
+  <img src="https://github.com/user-attachments/assets/f39f6148-127b-4646-b0f3-fa376111c80c" width=400 />
+  <img src="https://github.com/user-attachments/assets/93486374-0437-4068-b958-8616019cdd08" width=400 />
+  <img src="https://github.com/user-attachments/assets/f0bc6402-79f1-478c-9291-4ace93f419a1" width=400 />
 </details>
 
+<a href="https://www.canva.com/design/DAGRlRNXKwE/mAQMK2peDi0P8vbUyqKFtQ/view?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link&utm_source=editor">Press Release</h3></a>
 
 # Tech Stack
 
@@ -63,13 +58,17 @@ Empower everyday users to take control of the film review process. We built a mo
 </p>
 
 # Development
-*FigJam*
 
-https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-13-Project?node-id=47-1210&t=5FuWGUoj811hLdaH-1
+## Planning
+Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-13-Project?node-id=47-1210&t=5FuWGUoj811hLdaH-1">Figjam Board</a>
 
-# Future
+## Design
 
-# Team
+## Tech Choices
+
+# What's Next?
+
+# Team ReelStack
 
 
 
