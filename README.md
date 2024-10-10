@@ -1,7 +1,7 @@
 <h1 align="center">Reel Magic</h1>
 
 <div align="center">
-  <img width="1000" alt="ReelMagic home page" src="https://github.com/user-attachments/assets/05fb14d9-8661-4ac0-8f3c-b910abb213a5">
+  <img width="100%" alt="ReelMagic home page" src="https://github.com/user-attachments/assets/05fb14d9-8661-4ac0-8f3c-b910abb213a5">
 </div>
 
 <!-- # Readme Plan
@@ -38,10 +38,18 @@ Empower everyday users to take control of the film review process. We built a mo
 <details open>
   <summary>Features</summary>
 <br>
-  <img src="https://github.com/user-attachments/assets/1e9d6d21-c431-407d-8062-a3811be16183" width=400 />
-  <img src="https://github.com/user-attachments/assets/f39f6148-127b-4646-b0f3-fa376111c80c" width=400 />
-  <img src="https://github.com/user-attachments/assets/93486374-0437-4068-b958-8616019cdd08" width=400 />
-  <img src="https://github.com/user-attachments/assets/f0bc6402-79f1-478c-9291-4ace93f419a1" width=400 />
+  <p align="center">
+    <img width="49%" src="https://github.com/user-attachments/assets/8f4f9cff-bc4f-4d36-a980-a4b1ca0ed8a1" />
+    &nbsp;
+    <img width="49%" src="https://github.com/user-attachments/assets/ca512b11-5481-4ca3-8a6f-40841843c7f5" />
+  </p>
+
+  <p align="center">
+    <img width="49%" src="https://github.com/user-attachments/assets/9fe174cf-aa1d-4c0b-831e-fad77f4f85a5" />
+    &nbsp;
+    <img width="49%" src="https://github.com/user-attachments/assets/58b47baa-dde5-41b4-b2f9-246becd0d183" />
+  </p>
+
 </details>
 
 <a href="https://www.canva.com/design/DAGRlRNXKwE/mAQMK2peDi0P8vbUyqKFtQ/view?utm_content=DAGRlRNXKwE&utm_campaign=designshare&utm_medium=link&utm_source=editor">Press Release</h3></a>
@@ -68,9 +76,9 @@ As a team, we had a week to conceptualise, design, develop and present an app th
 <details>
   <summary>Pictures</summary>
   <br>
-    <img width="750" alt="Screenshot 2024-10-10 at 15 48 41" src="https://github.com/user-attachments/assets/e82a481f-ed72-40a6-a038-b7978b238547">
-    <img width="750" alt="Screenshot 2024-10-10 at 15 49 24" src="https://github.com/user-attachments/assets/d4f564b9-5621-4de0-b7bf-21f1dc556e6b">
-    <img width="750" alt="Screenshot 2024-10-10 at 15 49 37" src="https://github.com/user-attachments/assets/baee1d36-c529-439a-acfd-616634509976">
+    <img width="75%" alt="Screenshot 2024-10-10 at 15 48 41" src="https://github.com/user-attachments/assets/e82a481f-ed72-40a6-a038-b7978b238547">
+    <img width="75%" alt="Screenshot 2024-10-10 at 15 49 24" src="https://github.com/user-attachments/assets/d4f564b9-5621-4de0-b7bf-21f1dc556e6b">
+    <img width="75%" alt="Screenshot 2024-10-10 at 15 49 37" src="https://github.com/user-attachments/assets/baee1d36-c529-439a-acfd-616634509976">
 </details>
 
 Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-13-Project?node-id=47-1210&t=5FuWGUoj811hLdaH-1">Figjam Board</a>
@@ -81,7 +89,7 @@ Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-1
 - We created wireframes, taking into consideration competitor app functionality and our ideas. Used <a href="https://uizard.io/">UIzard</a> to help us out. Then cherry-picked the best features that made sense for what we were trying to accomplish.
 - Created prototypes with a basic design to test out colour variations
 
-<img width="600" alt="Screenshot 2024-10-10 at 15 59 42" src="https://github.com/user-attachments/assets/fc405681-19a8-4828-b2a6-9103bada5a34">
+<img alt="Screenshot 2024-10-10 at 15 59 42" src="https://github.com/user-attachments/assets/fc405681-19a8-4828-b2a6-9103bada5a34">
 
 ## Tech Choices
 
@@ -89,22 +97,31 @@ Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-1
 - <a href="https://nextjs.org/">Next.js</a> - We knew that we were going to have multiple pages. To make the routing easier for us, we chose Next.js
 - That means that we would use <a href="https://react.dev/">React</a>, allowing us to use components, making our code more manageable and easier to scale.
 
-<img width="900" alt="Screenshot 2024-10-10 at 16 10 03" src="https://github.com/user-attachments/assets/d43bea6b-bfe8-47f8-832a-8b1949b3dc1d">
+<img alt="Screenshot 2024-10-10 at 16 10 03" src="https://github.com/user-attachments/assets/d43bea6b-bfe8-47f8-832a-8b1949b3dc1d">
 
 # What's Next?
 
 <details open>
-  <summary>Open</summary>
+  <summary></summary>
 <br>
+  <p align="center">
+<img width="49%" src="https://github.com/user-attachments/assets/1876027b-e2e0-4154-aad7-8293f879e99d" />
+&nbsp;
+<img width="49%" src="https://github.com/user-attachments/assets/5cc9eab4-f3be-4c76-b57f-7f0711ac31f3" />
+  </p>
+
+  <p align="center">
+<img width="49%" src="https://github.com/user-attachments/assets/efae88fc-d620-420b-99b9-4ab4aa1160e3" />
+&nbsp;    
+<img width="49%" src="https://github.com/user-attachments/assets/444c919d-a6b5-4138-b0a4-8ff31c3402bf" />
+  </p>
+
+  <p align="center">
+<img width="49%" src="https://github.com/user-attachments/assets/7bf6c64a-ede7-49ae-8df0-832e3ebaba58" />
+&nbsp;
+<img width="49%" src="https://github.com/user-attachments/assets/b5e9a811-2726-4c37-b932-d3ca4208474d" />
+  </p>
   
-<img width=400 src="https://github.com/user-attachments/assets/85d0f1fc-bd4e-4789-9179-4dccc6747510" />
-<img width=400 src="https://github.com/user-attachments/assets/147db84b-2b6e-4aea-b678-0644548dc625" />
-<img width=400 src="https://github.com/user-attachments/assets/f148be8c-1a63-4281-b00f-212b92343e63" />
-<img width=400 src="https://github.com/user-attachments/assets/35977cf7-fef4-4918-9ab6-2ae886c09665" />
-<img width=400 src="https://github.com/user-attachments/assets/c70720c4-7fa5-46cb-9a4d-ddb5c7930683" />
-<img width=400 src="https://github.com/user-attachments/assets/21d0b745-4f19-46ea-a8ab-eb41f55784d0" />
-
-
 </details>
 
 # Team ReelStack
