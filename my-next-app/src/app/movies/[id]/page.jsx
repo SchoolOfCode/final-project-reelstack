@@ -105,7 +105,7 @@ export default function MoviePage() {
           </p>
           <p className={styles.text}>
             <strong>Rating:</strong> {Math.round(movieData.vote_average)}
-            <img src="/star.svg" alt="Star" width={20} height={20} />
+            <Image src="/star.svg" alt="Star" width={20} height={20} />
           </p>
           <p className={styles.text}>
             <strong>Overview:</strong> {movieData.overview}
