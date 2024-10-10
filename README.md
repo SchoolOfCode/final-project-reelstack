@@ -9,30 +9,29 @@
   - Overview 🟢
   - Mission Statement 🟢
   - Article Link 🟢
-  - Features (slides)
+  - Features (slides) 🟢
 - Tech Stack
   - Icons 🟢
 - Development
-  - Planning
-  - Why Tech?
-  - Design
+  - Planning 🟢
+  - Design 🟢
+  - Why Tech? 🟢
 - Future
-  - Code
+  - Code 🟢
   - AI
   - A + A
   - Ratings
   - Desktop
-  - Gamma
 - Team
   - Links (Linkedin, Github)
 -->
 # Join the Reel Revolution
 
 <h3>Overview</h3>
-Reel Magic is a community-driven platform where users control the reviews, allowing them to discover films that suit their tastes through honest, peer-based opinions. By making the review process transparent and focusing on user interaction, we aim to improve the film review experience, which is often dominated by professional critics.
+Reel Magic is a community-driven platform where users control the reviews, allowing them to discover films that suit their tastes through honest, peer-based opinions. By making the review process transparent and focusing on user interaction, we aim to improve the film review experience, often dominated by professional critics.
 
 <h3>Our mission</h3> 
-Empower everyday users to take control of the film review process. We built a mobile-first platform, acknowledging that 91% of internet traffic is on smartphones. Our goal is to reduce browsing time and deliver personalized, trustworthy movie recommendations.
+Empower everyday users to take control of the film review process. We built a mobile-first platform, acknowledging that 91% of internet traffic is on smartphones. We aim to reduce browsing time and deliver personalized, trustworthy movie recommendations.
 
 <br><br>
 
@@ -60,8 +59,8 @@ Empower everyday users to take control of the film review process. We built a mo
 
 ## Planning
 
-As a team, we had a week to conseptualise, design, develop and present an app that solves a problem statement of our choosing.
-- We were concscious of the limited time that we had. To make our decicsion making processees more streamlined, we used timers and used dot voting.
+As a team, we had a week to conceptualise, design, develop and present an app that solves a problem statement of our choosing.
+- We were conscious of the limited time that we had. To make our decision-making processes more streamlined, we used timers and used dot voting.
 - Created a user persona to help guide us with the UX of the project
 - Conducted competitor analysis and performed SWOT assessments
 - Researched competitor app designs and functionality
@@ -79,14 +78,34 @@ Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-1
 ## Design
 
 - Used <a href="https://coolors.co/">Coolers</a> to pick out some colour pallettes
-- Created Wireframes, taking into consideration competitor app functionality and our own ideas. Used <a href="https://uizard.io/">UIzard</a> to help us out. Then cherry picked the best features that made sense for what we were trying to acomplish.
-- Created prototypes with basic design to test out color variations
+- We created wireframes, taking into consideration competitor app functionality and our ideas. Used <a href="https://uizard.io/">UIzard</a> to help us out. Then cherry-picked the best features that made sense for what we were trying to accomplish.
+- Created prototypes with a basic design to test out colour variations
 
 <img width="600" alt="Screenshot 2024-10-10 at 15 59 42" src="https://github.com/user-attachments/assets/fc405681-19a8-4828-b2a6-9103bada5a34">
 
 ## Tech Choices
 
+- Due to the limited build time, we chose to go with JavaScript over TypeScript, with an option to include TypeScript after our MVP1 was achieved
+- <a href="https://nextjs.org/">Next.js</a> - We knew that we were going to have multiple pages. To make the routing easier for us, we chose Next.js
+- That means that we would use <a href="https://react.dev/">React</a>, allowing us to use components, making our code more manageable and easier to scale.
+
+<img width="900" alt="Screenshot 2024-10-10 at 16 10 03" src="https://github.com/user-attachments/assets/d43bea6b-bfe8-47f8-832a-8b1949b3dc1d">
+
 # What's Next?
+
+<details open>
+  <summary>Open</summary>
+<br>
+  
+<img width=400 src="https://github.com/user-attachments/assets/85d0f1fc-bd4e-4789-9179-4dccc6747510" />
+<img width=400 src="https://github.com/user-attachments/assets/147db84b-2b6e-4aea-b678-0644548dc625" />
+<img width=400 src="https://github.com/user-attachments/assets/f148be8c-1a63-4281-b00f-212b92343e63" />
+<img width=400 src="https://github.com/user-attachments/assets/35977cf7-fef4-4918-9ab6-2ae886c09665" />
+<img width=400 src="https://github.com/user-attachments/assets/c70720c4-7fa5-46cb-9a4d-ddb5c7930683" />
+<img width=400 src="https://github.com/user-attachments/assets/21d0b745-4f19-46ea-a8ab-eb41f55784d0" />
+
+
+</details>
 
 # Team ReelStack
 
