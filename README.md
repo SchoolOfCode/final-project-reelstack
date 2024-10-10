@@ -28,6 +28,7 @@
 -->
 
 # Join the Reel Revolution
+<a href="https://reelmagic.netlify.app/">View Site</a> (Make sure to either inspect in mobile mode or shrink your browser for the best experience)
 
 <h3>Overview</h3>
 Reel Magic is a community-driven platform where users control the reviews, allowing them to discover films that suit their tastes through honest, peer-based opinions. By making the review process transparent and focusing on user interaction, we aim to improve the film review experience, often dominated by professional critics.
