@@ -128,7 +128,7 @@ Check out our <a href="https://www.figma.com/board/0WWTRyqitEptkKmi4v61t8/Week-1
 
 # Team ReelStack
 <br>
-<table>
+<table align="center">
   <tr>
     <th><a href="https://github.com/Orbiccode"><img src="https://github.com/user-attachments/assets/74d021dd-b0f6-4e3b-9463-3725096dff52" title="James O'Kane" width="50" height="50"/></a></th>
     <th><a href="https://github.com/olikelly00"><img src="https://github.com/user-attachments/assets/ccf41908-fa7c-4ecf-9054-f60c6de0edeb" title="Oliver Kelly" width="50" height="50"/></a></th>
