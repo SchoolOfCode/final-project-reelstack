@@ -19,7 +19,7 @@
 - **James**: Preference for frontend/UI, secondary focus on backend/AI.
 - **Amin**: Open to all areas.
 - **Rowan**: Ideally would focus more on backend.
-- **Shilpa**: Ideally backend, with interest in UX.
+- **Shilpa**: Ideally backend, with interest in UX, pushed to do some frontend at some point.
 - **Maria**: Preference for frontend and UX, but open to other areas.
 
 ## Documentation of Progress and Learnings
