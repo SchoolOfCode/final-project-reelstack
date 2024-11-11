@@ -21,3 +21,5 @@ describe('HeroSection Component', () => {
     cy.contains('h1', firstMessage, { timeout: 30000 }).should('be.visible');
   });
 });
+
+// Test For Herosection 
