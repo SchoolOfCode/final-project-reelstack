@@ -1,6 +1,7 @@
-#!/bin/sh
-# . "$(dirname "$0")/_/husky.sh"
+cd my-next-app
+npx lint-staged
+npx prettier --write "./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
+npm audit
 
-npm run lint
 
-echo "Ready to Push"
+

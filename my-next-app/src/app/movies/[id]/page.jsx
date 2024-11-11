@@ -79,29 +79,39 @@ export default function MoviePage() {
 
   return (
     <div className={styles.wrapper}>
+      {/* Backdrop */}
+      <div className={styles.backdrop} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w300${movieData.poster_path})` }}></div>
+      
       {/* Movie Details */}
       <h1 className={styles.text}>{movieData.title}</h1>
-      <Image
-        src={
-          movieData.poster_path
-            ? `https://image.tmdb.org/t/p/w300${movieData.poster_path}`
-            : '/no-image-available.png'
-        }
-        alt={movieData.title}
-        className={styles.poster}
-        width={400}
-        height={500}
-      />
-      <p className={styles.text}>
-        <strong>Release Date:</strong> {movieData.release_date}
-      </p>
-      <p className={styles.text}>
-        <strong>Rating:</strong> {movieData.vote_average} ⭐️
-      </p>
-      <p className={styles.text}>
-        <strong>Overview:</strong> {movieData.overview}
-      </p>
-
+      <div className={styles.movieBox}>
+        <div className={styles.posterContainer}>
+          <Image
+            src={
+              movieData.poster_path
+                ? `https://image.tmdb.org/t/p/w300${movieData.poster_path}`
+                : '/no-image-available.png'
+            }
+            alt={movieData.title}
+            className={styles.poster}
+            width={200}
+            height={300}
+            priority={true}
+          />
+        </div>
+        <div className={styles.infoContainer}>
+          <p className={styles.text}>
+            <strong>Release Date:</strong> {movieData.release_date}
+          </p>
+          <p className={styles.text}>
+            <strong>Rating:</strong> {Math.round(movieData.vote_average)}
+            <Image src="/star.svg" alt="Star" width={20} height={20} />
+          </p>
+          <p className={styles.text}>
+            <strong>Overview:</strong> {movieData.overview}
+          </p>
+        </div>
+      </div>
       {/* Reviews Section */}
       <div className={styles.wrapperReview}>
         <h2 className={styles.text}>Reviews</h2>

@@ -6,6 +6,8 @@ html,
 body {
   background: linear-gradient(150deg, #001523, #003356, #001523 90%);
   color: #d7dae3;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
