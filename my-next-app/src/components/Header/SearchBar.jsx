@@ -76,7 +76,6 @@ export default function SearchBar({ onClose }) {
   };
 
   const handleSelect = (movie) => {
-    // console.log("Selected movie:", movie);
     setQuery(movie.title);
     setResults([]);
     onClose(); //optional
@@ -85,7 +84,6 @@ export default function SearchBar({ onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission if needed
     if (highlightedIndex >= 0 && highlightedIndex < results.length) {
       handleSelect(results[highlightedIndex]);
     } else if (results.length > 0) {
@@ -96,12 +94,18 @@ export default function SearchBar({ onClose }) {
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setHighlightedIndex((prevIndex) =>
-        prevIndex < results.length - 1 ? prevIndex + 1 : prevIndex,
-      );
+      setHighlightedIndex((prevIndex) => {
+        const newIndex = prevIndex < results.length - 1 ? prevIndex + 1 : prevIndex;
+        console.log('New Highlighted Index (ArrowDown):', newIndex); // Log the new index when ArrowDown is pressed
+        return newIndex;
+      });
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setHighlightedIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : -1));
+      setHighlightedIndex((prevIndex) => {
+        const newIndex = prevIndex > 0 ? prevIndex - 1 : -1;
+        console.log('New Highlighted Index (ArrowUp):', newIndex); // Log the new index when ArrowUp is pressed
+        return newIndex;
+      });
     } else if (e.key === 'Enter') {
       if (highlightedIndex >= 0 && highlightedIndex < results.length) {
         handleSelect(results[highlightedIndex]);
@@ -140,19 +144,13 @@ export default function SearchBar({ onClose }) {
           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
         </svg>
       </button>
-      {/* <button 
-        type="submit" 
-        className={styles.submitButton}
-        aria-label="Submit search"
-      >
-        {/* icon removed */}
-      {/* </button> */}
       {results.length > 0 && (
         <ul className={styles.resultsList}>
           {results.map((movie, index) => (
             <li
               key={movie.id}
               className={`${styles.resultItem} ${index === highlightedIndex ? styles.highlighted : ''}`}
+              data-testid={index === highlightedIndex ? 'highlighted-item' : ''}
               onClick={() => handleSelect(movie)}
               onMouseEnter={() => setHighlightedIndex(index)}
               onMouseLeave={() => setHighlightedIndex(-1)}
@@ -179,3 +177,4 @@ export default function SearchBar({ onClose }) {
     </form>
   );
 }
+
